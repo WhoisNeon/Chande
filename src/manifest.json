@@ -1,0 +1,16 @@
+{
+  "short_name": "Chand?!",
+  "name": "Chand?!",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "492x492"
+    }
+  ],
+  "start_url": "/Chand/",
+  "background_color": "#D6D2CF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#D6D2CF"
+}

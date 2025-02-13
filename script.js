@@ -166,7 +166,7 @@ async function updateCurrencyData() {
             const lastSeenPrice = getLastSeenPrice(currency.code);
 
             // محاسبه تغییرات قیمت
-            const priceChange = calculatePriceChange(currentPrice, lastSeenPrice);
+            const priceChange = Math.floor(calculatePriceChange(currentPrice, lastSeenPrice));
 
             // نمایش تغییرات قیمت
             if (priceChange > 0) {

@@ -22,7 +22,7 @@ function createCard(currency) {
 
     const code = document.createElement('p');
     code.classList.add('code');
-    code.textContent = currency.code;
+    code.textContent = currency.code.toUpperCase();
 
     nameAndCode.appendChild(name);
     nameAndCode.appendChild(code);

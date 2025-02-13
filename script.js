@@ -1,5 +1,5 @@
-const apiUrl = 'https://raw.githubusercontent.com/CertMusashi/Chand-api/refs/heads/main/arz.json';
-let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd", "eur", "18ayar"];
+const apiUrl = 'https://raw.githubusercontent.com/CertMusashi/Chand-api/refs/heads/main/arz.json?' + new Date().getTime();
+let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies'));
 
 function createCard(currency) {
     const card = document.createElement('div');
@@ -52,6 +52,8 @@ function openCurrencySelector() {
 
     const modalContent = document.createElement('div');
     modalContent.classList.add('modal-content');
+    modalContent.style.maxHeight = '80vh';
+    modalContent.style.overflowY = 'auto';
 
     const closeButton = document.createElement('span');
     closeButton.classList.add('close');
@@ -136,32 +138,21 @@ function getLastSeenPrice(currencyCode) {
 }
 
 function formatPrice(price) {
-    return price >= 10000000 ? `${(price / 10000000).toLocaleString('en-US', { maximumFractionDigits: 3 })}M` : price.toLocaleString('en-US');
+    return price >= 1000000 ? `${(price / 1000000).toLocaleString('en-US', { maximumFractionDigits: 3 })}M` : price.toLocaleString('en-US');
 }
 
 async function updateCurrencyData() {
-    const loadingElement = document.getElementById('loading');
-    const mainContent = document.getElementById('main-content');
-
-    // نمایش صفحه لودینگ
-    loadingElement.style.display = 'flex';
-    mainContent.style.display = 'none';
+    const grid = document.getElementById('currency-grid');
+    const fragment = document.createDocumentFragment();
 
     const data = await fetchCurrencyData();
     if (!data) return;
 
-    // مخفی کردن صفحه لودینگ و نمایش محتوای اصلی
-    loadingElement.style.display = 'none';
-    mainContent.style.display = 'block';
-
     const dateElement = document.getElementById('datetime');
     dateElement.textContent = `${data.date}`;
 
-    const grid = document.getElementById('currency-grid');
-    const fragment = document.createDocumentFragment();
-
     const requests = userCurrencies.map(code => data.currencies.find(c => c.code === code));
-
+    
     requests.forEach(currency => {
         if (currency) {
             const card = createCard(currency);
@@ -170,11 +161,14 @@ async function updateCurrencyData() {
             const changeElement = card.querySelector('.change');
 
             let currentPrice = currency.price;
-            priceElement.textContent = formatPrice(currentPrice);
 
-            const lastSeenPrice = getLastSeenPrice(currency.code) || currentPrice;
+            // دریافت قیمت قبلی از localStorage (خام)
+            const lastSeenPrice = getLastSeenPrice(currency.code);
+
+            // محاسبه تغییرات قیمت
             const priceChange = calculatePriceChange(currentPrice, lastSeenPrice);
 
+            // نمایش تغییرات قیمت
             if (priceChange > 0) {
                 changeElement.textContent = `↑ ${priceChange}`;
                 changeElement.style.color = '#2ecc71';
@@ -185,7 +179,12 @@ async function updateCurrencyData() {
                 changeElement.textContent = '';
             }
 
+            // ذخیره قیمت جدید در localStorage به صورت خام
             saveLastSeenPrice(currency.code, currentPrice);
+
+            // نمایش قیمت با فرمت
+            priceElement.textContent = formatPrice(currentPrice);
+
             fragment.appendChild(card);
         }
     });

@@ -170,10 +170,10 @@ async function updateCurrencyData() {
 
             // نمایش تغییرات قیمت
             if (priceChange > 0) {
-                changeElement.textContent = `↑ ${priceChange}`;
+                changeElement.textContent = `↑ ${priceChange.toLocaleString('en-US')}`;
                 changeElement.style.color = '#2ecc71';
             } else if (priceChange < 0) {
-                changeElement.textContent = `↓ ${Math.abs(priceChange)}`;
+                changeElement.textContent = `↓ ${Math.abs(priceChange).toLocaleString('en-US')}`;
                 changeElement.style.color = '#e74c3c';
             } else {
                 changeElement.textContent = '';

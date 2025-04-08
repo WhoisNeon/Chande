@@ -29,4 +29,4 @@ If you have any ideas for improvements or bug fixes, feel free to submit a Pull 
 
 ---
 
-**This app is inspired by the [Chand!?](https://apps.apple.com/us/app/chand/id1524200188) iOS app and has no affiliation with it.**
+❗**This app is inspired by the [Chand!?](https://apps.apple.com/us/app/chand/id1524200188) iOS app and has no affiliation with it.**

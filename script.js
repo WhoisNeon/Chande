@@ -1,6 +1,8 @@
 const apiUrl = 'https://raw.githubusercontent.com/CertMusashi/Chande-api/refs/heads/main/arz.json?' + new Date().getTime();
 let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd", "eur", "18ayar"];
 
+//.
+
 function createCard(currency) {
     const card = document.createElement('div');
     card.classList.add('card');

@@ -1,4 +1,4 @@
-const apiUrl = 'https://raw.githubusercontent.com/CertMusashi/Chand-api/refs/heads/main/arz.json?' + new Date().getTime();
+const apiUrl = 'https://raw.githubusercontent.com/CertMusashi/Chande-api/refs/heads/main/arz.json?' + new Date().getTime();
 let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd", "eur", "18ayar"];
 
 function createCard(currency) {
@@ -150,6 +150,17 @@ async function updateCurrencyData() {
 
     const dateElement = document.getElementById('datetime');
     dateElement.textContent = `${data.date}`;
+
+    if (!data.currencies) {
+        const message = document.createElement('p');
+        message.textContent = 'درحال بروزرسانی ، بزودی برمیگردیم :)';
+        message.style.textAlign = 'center';
+        message.style.fontSize = '1.2rem';
+        message.style.marginTop = '20px';
+
+        grid.replaceChildren(message);
+        return;
+    }
 
     const requests = userCurrencies.map(code => data.currencies.find(c => c.code === code));
     

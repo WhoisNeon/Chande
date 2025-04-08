@@ -1,34 +1,32 @@
-# **Chand?! (Clone)**
+# Chande?!
 
-این یک پروژه‌ی **اوپن سورس و کلون شده** از اپلیکیشن [Chand?!](https://apps.apple.com/us/app/chand/id1524200188) هست که فقط برای iOS منتشر شده بود. در این نسخه، ظاهر و آیکون‌ها مشابه نسخه‌ی اصلی طراحی (کپی) شده‌اند، اما این پروژه هیچ وابستگی‌ای به توسعه‌دهنده‌ی اصلی ندارد.
+Chande?! is a fast, minimal, and installable web app for tracking real-time currency and cryptocurrency prices.
 
-## **ویژگی‌ها**
-✅ نمایش قیمت لحظه‌ای ارزهای رایج و رمزارزها 
+## Features
 
-✅ نمایش تغییرات قیمت (نسبت به آخرین قیمت دیده شده) 
+✅ Real-time currency and cryptocurrency prices  
+✅ Price change tracking  
+✅ Clean and minimal user interface
 
-✅ رابط کاربری (تقریبا) مشابه نسخه‌ی اصلی Chand?! 
+## How to Install
 
-✅ قابلیت افزودن یا حذف ارزهای دلخواه از لیست  
+1. Simply visit the following URL:
 
-### **نصب **
-1. کافی‌ست به آدرس زیر برید:
+🔗 https://certmusashi.github.io/Chande/
 
-🔗 [https://certmusashi.github.io/Chand/](https://certmusashi.github.io/Chand/)
-
-2. بعد از باز کردن صفحه، گزینه‌ی **Add to Home Screen** یا **Install** رو انتخاب کنید.
-
-
-## **منابع**  
-قیمت ارزها از پروژه‌ی زیر دریافت می‌شود:  
-🔗 **[Chand API](https://github.com/CertMusashi/Chand-api)** –
-
-## **مشارکت در پروژه**
-اگر ایده‌ای برای بهبود عملکرد یا رفع باگ دارید، می‌توانید **Pull Request** بفرستید یا در **Issues** مطرح کنید.
-
+2. Once the page loads, select **Add to Home Screen** or **Install** to install the app on your device.
 
 ---
-.
+
+## Data Source
+
+Currency prices are fetched from the following API:  
+🔗 **[Chande API](https://github.com/CertMusashi/Chande-api)** –
+
+## Contributing
+
+If you have any ideas for improvements or bug fixes, feel free to submit a Pull Request or open an Issue.
+
 ---
 
-![اسکرین‌شات از محیط برنامه](src/screenshot.png)
+**This app is inspired by the [Chand!?](https://apps.apple.com/us/app/chand/id1524200188) iOS app and has no affiliation with it.**

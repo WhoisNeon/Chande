@@ -1,4 +1,4 @@
-const CACHE_NAME = 'chand-app-v1';
+const CACHE_NAME = 'chande-app-v1';
 
 self.addEventListener('install', (event) => {
   console.log('Service Worker installed');

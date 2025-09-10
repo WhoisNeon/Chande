@@ -1,5 +1,5 @@
 const apiUrl = 'https://raw.githubusercontent.com/CertMusashi/Chande-api/refs/heads/main/arz.json?' + new Date().getTime();
-let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd", "eur", "18ayar"];
+let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd", "eur", "18ayar","btc"];
 
 //.
 
@@ -109,13 +109,97 @@ function openCurrencySelector() {
     document.body.appendChild(modal);
 }
 
-function createAddCard() {
-    const addCard = document.createElement('div');
-    addCard.classList.add('card', 'add-card');
-    addCard.textContent = '+';
-    addCard.addEventListener('click', openCurrencySelector);
-    return addCard;
+function openSettings() {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    const modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content');
+
+    const closeButton = document.createElement('span');
+    closeButton.classList.add('close');
+    closeButton.textContent = '×';
+    closeButton.addEventListener('click', () => modal.remove());
+
+    // بخش بالا: دارک مود و دکمه Manage Cards کنار هم
+    const topSection = document.createElement('div');
+    topSection.classList.add('settings-top');
+    topSection.style.display = 'flex';
+    topSection.style.justifyContent = 'space-between';
+    topSection.style.alignItems = 'center';
+    topSection.style.gap = '20px';
+
+    // دارک مود
+    const darkModeSection = document.createElement('div');
+    darkModeSection.classList.add('settings-section');
+    const darkModeLabel = document.createElement('label');
+    const darkModeToggle = document.createElement('input');
+    darkModeToggle.type = 'checkbox';
+    darkModeToggle.checked = document.body.classList.contains('dark-mode');
+    darkModeToggle.addEventListener('change', () => {
+        document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+        localStorage.setItem('darkMode', darkModeToggle.checked);
+    });
+    darkModeLabel.textContent = ' Dark Mode ';
+    darkModeLabel.prepend(darkModeToggle);
+    darkModeSection.appendChild(darkModeLabel);
+
+    // دکمه Manage Cards
+    const cardSection = document.createElement('div');
+    cardSection.classList.add('settings-section');
+    const cardBtn = document.createElement('button');
+    cardBtn.textContent = 'Manage Cards';
+    cardBtn.classList.add('card-btn');
+    cardBtn.addEventListener('click', () => {
+        modal.remove();
+        openCurrencySelector();
+    });
+    cardSection.appendChild(cardBtn);
+
+    // گذاشتن دوتا آیتم کنار هم
+    topSection.appendChild(darkModeSection);
+    topSection.appendChild(cardSection);
+
+    // بخش تغییر اندازه Grid
+    const gridSection = document.createElement('div');
+    gridSection.classList.add('settings-section');
+    const gridLabel = document.createElement('label');
+    gridLabel.textContent = 'Cards Size: ';
+    const gridInput = document.createElement('input');
+    gridInput.type = 'number';
+    gridInput.classList.add('grid-Input');
+    gridInput.value = localStorage.getItem('gridSize') || 155;
+    gridInput.addEventListener('input', () => {
+        const size = gridInput.value || 155;
+        document.documentElement.style.setProperty('--grid-size', size + 'px');
+        localStorage.setItem('gridSize', size);
+    });
+    gridLabel.appendChild(gridInput);
+    gridSection.appendChild(gridLabel);
+
+    modalContent.appendChild(closeButton);
+    modalContent.appendChild(topSection); // دارک مود و دکمه Manage Cards کنار هم
+    modalContent.appendChild(gridSection);
+
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
 }
+
+// اجرای تنظیمات در لود صفحه
+document.addEventListener('DOMContentLoaded', () => {
+    // دکمه تنظیمات
+    document.getElementById('settings-btn').addEventListener('click', openSettings);
+
+    // دارک مود ذخیره‌شده
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+    }
+
+    // اندازه grid ذخیره‌شده
+    const gridSize = localStorage.getItem('gridSize') || 155;
+    document.documentElement.style.setProperty('--grid-size', gridSize + 'px');
+});
+
 
 async function fetchCurrencyData() {
     try {
@@ -140,7 +224,15 @@ function getLastSeenPrice(currencyCode) {
 }
 
 function formatPrice(price) {
-    return price >= 1000000 ? `${(price / 1000000).toLocaleString('en-US', { maximumFractionDigits: 3 })}M` : price.toLocaleString('en-US');
+    if (price >= 1000000) {
+        return `${(price / 1000000).toLocaleString('en-US', { maximumFractionDigits: 3 })}M`;
+    } else if (price >= 1) {
+        return price.toLocaleString('en-US');
+    } else if (price > 0) {
+        return price.toExponential(3); 
+    } else {
+        return "0";
+    }
 }
 
 async function updateCurrencyData() {
@@ -155,7 +247,7 @@ async function updateCurrencyData() {
 
     if (!data.currencies) {
         const message = document.createElement('p');
-        message.textContent = 'درحال بروزرسانی ، بزودی برمیگردیم :)';
+        message.textContent = "Updating, we'll be back soon :)";
         message.style.textAlign = 'center';
         message.style.fontSize = '1.2rem';
         message.style.marginTop = '20px';
@@ -202,7 +294,6 @@ async function updateCurrencyData() {
         }
     });
 
-    fragment.appendChild(createAddCard());
     grid.replaceChildren(fragment);
 }
 

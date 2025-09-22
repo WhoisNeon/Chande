@@ -1,3 +1,35 @@
+:root {
+    --background-color: #D6D2CF;
+    --card-background: #F8F7F5;
+    --text-color: #333;
+    --secondary-text-color: #666;
+    --modal-background: white;
+    --hover-background: rgba(0, 0, 0, 0.1);
+    --border-color: #ccc;
+    --button-background: #4facfe;
+    --button-text-color: #fff;
+    --positive-change: #2ecc71;
+    --negative-change: #e74c3c;
+    --scrollbar-track: #f1f1f1;
+    --scrollbar-thumb: #888;
+    --scrollbar-thumb-hover: #555;
+}
+
+body.dark-mode {
+    --background-color: #1e1e1e;
+    --card-background: #2b2b2b;
+    --text-color: #f0f0f0;
+    --secondary-text-color: #aaa;
+    --modal-background: #2c2c2c;
+    --hover-background: rgba(255, 255, 255, 0.1);
+    --border-color: #555;
+    --button-background: #1e1e1e;
+    --button-text-color: #fff;
+    --scrollbar-track: #2c2c2c;
+    --scrollbar-thumb: #555;
+    --scrollbar-thumb-hover: #777;
+}
+
 @font-face {
     font-family: "SF Pro Rounded";
     src: url("src/SF-Pro-Rounded-Regular.otf") format("opentype");
@@ -12,7 +44,8 @@
 
 body {
     font-family: "SF Pro Rounded", sans-serif;
-    background-color: #D6D2CF;
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 20px;
     user-select: none;
@@ -34,7 +67,7 @@ h1 {
 
 #datetime {
     font-size: 14px;
-    color: #666;
+    color: var(--secondary-text-color);
     margin: 0;
     padding: 5px 10px;
     border-radius: 5px;
@@ -42,16 +75,21 @@ h1 {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--grid-size, 155px), 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+@media (min-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
 }
 
 .card {
-    background: #F8F7F5;
+    background: var(--card-background);
     padding: 15px;
     border-radius: 15px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -102,12 +140,12 @@ h1 {
 
 .change {
     font-size: 18px;
-    color: red;
+    color: var(--negative-change);
     margin: 0;
 }
 
 .change.positive {
-    color: #2ecc71;
+    color: var(--positive-change);
 }
 
 .modal {
@@ -124,120 +162,208 @@ h1 {
 }
 
 .modal-content {
-    background-color: white;
+    width: 20rem;
+    background-color: var(--modal-background);
     padding: 15px;
     border-radius: 10px;
-    width: 270px;
     position: relative;
+    max-height: 90vh;
+    max-width: 45rem;
+    overflow-y: auto;
+}
+
+.modal-content.calculator-modal {
+    max-width: 270px; /* Specific max-width for calculator modal */
+}
+
+.modal-content .close+img {
+    margin: 1.5rem 0 .5rem 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.modal-content h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.modal-content p {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .close {
     position: absolute;
     top: 10px;
-    right: 10px; /* بردم سمت راست */
+    right: 10px;
     font-size: 18px;
     cursor: pointer;
 }
 
 .currency-item {
-    margin: 8px 0;
     display: flex;
     align-items: center;
-}
-
-.currency-item input {
-    margin-left: 8px;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-.modal-content h2 {
-    margin-top: 0;
-    font-size: 18px;
-    color: #333;
+.currency-item:hover {
+    background-color: var(--hover-background);
+}
+
+.currency-item .flag {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
 
 .currency-item label {
     font-size: 14px;
-    color: #333;
+    color: var(--text-color);
     cursor: pointer;
 }
 
-#settings-btn {
-    font-size: 15px;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-.settings-section {
-    margin: 12px 0;
-    padding: 12px;
-    border-radius: 10px;
-    background: #f5f5f5;
-    border: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.settings-section label {
-    font-size: 14px;
-}
-
-/* دکمه Manage Cards */
-.card-btn {
-    font-size: 14px;
-    font-weight: bold;
-    padding: 8px 14px;
+.settings-btn,
+.theme-toggle-btn,
+.copy-btn {
+    background: none;
     border: none;
-    border-radius: 8px;
-    background: #fff;   
-    color: #000;        
     cursor: pointer;
-    border: 1px solid #ccc;
-}
-
-/* ورودی Grid Size */
-.grid-Input {
-    width: 60px;
     padding: 5px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    text-align: center;
-    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; /* Smaller font size */
+    color: var(--text-color);
+    width: 30px; /* Smaller width */
+    height: 30px; /* Smaller height */
 }
 
-.grid-Input:focus {
-    border: 1px solid #4facfe;
+@media (hover: hover) {
+
+    .settings-btn:hover,
+    .theme-toggle-btn:hover,
+    .copy-btn:hover {
+        background-color: var(--hover-background);
+        border-radius: 50%;
+    }
 }
 
-/* حالت دارک مود */
-body.dark-mode {
-    background-color: #1e1e1e;
-    color: #f0f0f0;
+.top-right-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-body.dark-mode .settings-section,
-body.dark-mode .currency-item,
-body.dark-mode .modal-content,
-body.dark-mode .currency-item label,
-body.dark-mode .modal-content h2 {
-    background-color: #2c2c2c;
-    color: #f0f0f0;
+.calculator-input {
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    margin-top: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-body.dark-mode .card {
-    background: #2b2b2b;
-    color: #fff;
+.close+div h3 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-body.dark-mode .card-btn {
-    background: #1e1e1e; 
-    color: #fff;
-    border: 1px solid #666;
+@media (min-width: 768px) {
+    .modal-content {
+        flex-direction: row !important;
+    }
+
+    .modal-column {
+        width: 50%;
+    }
+
+    .modal-column:nth-child(2) {
+        border-bottom: none !important;
+        border-right: 1px solid var(--border-color);
+    }
+
+    .close + div + div h3 {
+        margin-top: 0 !important;
+    }
 }
 
-body.dark-mode .grid-Input {
-    background: #1e1e1e;
-    color: #fff;        
-    border: 1px solid #555;
+.close + div {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.close + div + div h3 {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.currency-search-box {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.currency-list {
+    padding-top: 10px; /* Add some space below search box */
+}
+
+.currency-search-box {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+.reorder-btn {
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.reorder-btn:hover {
+    background-color: var(--hover-background);
+    border-radius: 50%;
+}
+
+.reorder-btn.remove-btn i {
+    color: var(--negative-change);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
 }

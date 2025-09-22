@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/icons/512x512.png" type="image/x-icon">
     <title>Chande!?</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="src/manifest.json">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <script defer src="script.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Chande!?  <span id="settings-btn">⚙️</span></h1>
-            <p id="datetime"></p>
+            <h1>Chande!?</h1>
+            <div class="top-right-controls">
+                <p id="datetime"></p>
+                <button id="theme-toggle-btn" class="theme-toggle-btn"></button>
+                <button id="settings-btn" class="settings-btn">
+                    <i class="ph ph-gear"></i>
+                </button>
+            </div>
         </div>
         <div class="grid" id="currency-grid">
             <!-- cards will shown here. -->

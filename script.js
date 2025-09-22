@@ -1,5 +1,5 @@
 const apiUrl = 'https://raw.githubusercontent.com/CertMusashi/Chande-api/refs/heads/main/arz.json?' + new Date().getTime();
-let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd", "eur", "18ayar","btc"];
+let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd", "eur", "18ayar", "btc"];
 
 //.
 
@@ -45,6 +45,8 @@ function createCard(currency) {
     card.appendChild(currencyInfo);
     card.appendChild(priceInfo);
 
+    card.addEventListener('click', () => openCalculatorModal(currency));
+
     return card;
 }
 
@@ -54,12 +56,13 @@ function openCurrencySelector() {
 
     const modalContent = document.createElement('div');
     modalContent.classList.add('modal-content');
-    modalContent.style.maxHeight = '80vh';
-    modalContent.style.overflowY = 'auto';
+    modalContent.style.display = 'flex';
+    modalContent.style.flexDirection = 'column';
+    modalContent.style.width = '90%';
 
     const closeButton = document.createElement('span');
     closeButton.classList.add('close');
-    closeButton.textContent = '×';
+    closeButton.innerHTML = '<i class="ph ph-x"></i>';
     closeButton.addEventListener('click', () => modal.remove());
 
     modal.addEventListener('click', (e) => {
@@ -68,40 +71,138 @@ function openCurrencySelector() {
         }
     });
 
-    const title = document.createElement('h2');
-    title.textContent = 'Currencies';
+    const leftColumn = document.createElement('div');
+    leftColumn.classList.add('modal-column');
+    leftColumn.style.padding = '10px';
+
+    const rightColumn = document.createElement('div');
+    rightColumn.classList.add('modal-column');
+    rightColumn.style.padding = '10px';
+
+    const leftTitle = document.createElement('h3');
+    leftTitle.innerHTML = '<i class="ph ph-list"></i> Available Currencies';
+    const leftSearchBox = document.createElement('input');
+    leftSearchBox.type = 'text';
+    leftSearchBox.placeholder = 'Search';
+    leftSearchBox.classList.add('currency-search-box');
+    leftSearchBox.addEventListener('input', renderLists);
+
+    const rightTitle = document.createElement('h3');
+    rightTitle.innerHTML = '<i class="ph ph-list-checks"></i> Selected Currencies';
+    const rightSearchBox = document.createElement('input');
+    rightSearchBox.type = 'text';
+    rightSearchBox.placeholder = 'Search';
+    rightSearchBox.classList.add('currency-search-box');
+    rightSearchBox.addEventListener('input', renderLists);
+
+    const leftList = document.createElement('div');
+    leftList.classList.add('currency-list');
+    leftList.style.maxHeight = '30vh';
+    leftList.style.overflowY = 'auto';
+
+    const rightList = document.createElement('div');
+    rightList.classList.add('currency-list');
+    rightList.style.maxHeight = '30vh';
+    rightList.style.overflowY = 'auto';
+
+    leftColumn.appendChild(leftTitle);
+    leftColumn.appendChild(leftSearchBox);
+    leftColumn.appendChild(leftList);
+    rightColumn.appendChild(rightTitle);
+    rightColumn.appendChild(rightSearchBox);
+    rightColumn.appendChild(rightList);
 
     modalContent.appendChild(closeButton);
-    modalContent.appendChild(title);
+    modalContent.appendChild(leftColumn);
+    modalContent.appendChild(rightColumn);
+
+    let allCurrencies = [];
+
+    function renderLists() {
+        leftList.innerHTML = '';
+        rightList.innerHTML = '';
+
+        const leftSearchTerm = leftSearchBox.value.toLowerCase();
+        const rightSearchTerm = rightSearchBox.value.toLowerCase();
+
+        const selectedCurrencies = userCurrencies
+            .map(code => allCurrencies.find(c => c.code === code))
+            .filter(c => c && (c.en.toLowerCase().includes(rightSearchTerm) || c.code.toLowerCase().includes(rightSearchTerm)));
+
+        const availableCurrencies = allCurrencies.filter(c => !userCurrencies.includes(c.code) &&
+            (c.en.toLowerCase().includes(leftSearchTerm) || c.code.toLowerCase().includes(leftSearchTerm)));
+
+        if (availableCurrencies.length === 0) {
+            const message = document.createElement('p');
+            message.textContent = leftSearchTerm ? "No matching currencies found." : "All currencies selected.";
+            message.style.textAlign = 'center';
+            leftList.appendChild(message);
+        } else {
+            availableCurrencies.forEach(currency => {
+                const item = createCurrencyItem(currency, 'add', null, null, renderLists);
+                leftList.appendChild(item);
+            });
+        }
+
+        if (selectedCurrencies.length === 0) {
+            const message = document.createElement('p');
+            message.textContent = rightSearchTerm ? "No matching currencies found." : "No currencies selected.";
+            message.style.textAlign = 'center';
+            rightList.appendChild(message);
+        } else {
+            selectedCurrencies.forEach((currency, index) => {
+                const item = createCurrencyItem(currency, 'remove', index, selectedCurrencies.length, renderLists);
+                rightList.appendChild(item);
+            });
+        }
+    }
 
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            data.currencies.forEach(currency => {
-                const currencyItem = document.createElement('div');
-                currencyItem.classList.add('currency-item');
+            allCurrencies = data.currencies;
+            renderLists();
 
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                checkbox.id = currency.code;
-                checkbox.checked = userCurrencies.includes(currency.code);
-                checkbox.addEventListener('change', () => {
-                    if (checkbox.checked) {
-                        userCurrencies.push(currency.code);
-                    } else {
-                        userCurrencies = userCurrencies.filter(code => code !== currency.code);
-                    }
+            new Sortable(leftList, {
+                group: 'currencies',
+                animation: 150,
+                sort: false, // Prevent reordering in the available column
+                // onAdd is removed here, as removal from userCurrencies is handled by rightList's onRemove
+            });
+
+            new Sortable(rightList, {
+                group: 'currencies',
+                animation: 150,
+                onAdd: function (evt) {
+                    // This fires when an item is dragged from leftList to rightList (selecting it)
+                    const code = evt.item.dataset.code;
+                    userCurrencies.splice(evt.newIndex, 0, code);
                     localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
                     updateCurrencyData();
-                });
+                    renderLists();
+                },
+                onRemove: function (evt) {
+                    // This fires when an item is dragged from rightList to leftList (deselecting/deleting it)
+                    const code = evt.item.dataset.code;
+                    userCurrencies = userCurrencies.filter(c => c !== code);
+                    localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+                    updateCurrencyData();
+                    renderLists();
+                },
+                onUpdate: function (evt) {
+                    // This fires when an item is reordered within the rightList
+                    const code = evt.item.dataset.code;
+                    const oldIndex = evt.oldIndex;
+                    const newIndex = evt.newIndex;
 
-                const label = document.createElement('label');
-                label.htmlFor = currency.code;
-                label.textContent = `${currency.name} (${currency.code})`;
+                    // Reorder the userCurrencies array
+                    const [removed] = userCurrencies.splice(oldIndex, 1);
+                    userCurrencies.splice(newIndex, 0, removed);
 
-                currencyItem.appendChild(checkbox);
-                currencyItem.appendChild(label);
-                modalContent.appendChild(currencyItem);
+                    localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+                    updateCurrencyData();
+                    renderLists();
+                }
             });
         });
 
@@ -109,95 +210,119 @@ function openCurrencySelector() {
     document.body.appendChild(modal);
 }
 
-function openSettings() {
-    const modal = document.createElement('div');
-    modal.classList.add('modal');
+function createCurrencyItem(currency, type, index, totalSelected, renderLists) {
+    const item = document.createElement('div');
+    item.classList.add('currency-item');
+    item.dataset.code = currency.code;
+    if (type === 'add') {
+        item.addEventListener('click', () => {
+            userCurrencies.push(currency.code);
+            localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+            updateCurrencyData();
+            renderLists();
+        });
+    }
 
-    const modalContent = document.createElement('div');
-    modalContent.classList.add('modal-content');
+    const flag = document.createElement('img');
+    flag.classList.add('flag');
+    flag.src = currency.icon;
 
-    const closeButton = document.createElement('span');
-    closeButton.classList.add('close');
-    closeButton.textContent = '×';
-    closeButton.addEventListener('click', () => modal.remove());
+    const label = document.createElement('label');
+    label.textContent = `${currency.en} (${currency.code.toUpperCase()})`;
 
-    // بخش بالا: دارک مود و دکمه Manage Cards کنار هم
-    const topSection = document.createElement('div');
-    topSection.classList.add('settings-top');
-    topSection.style.display = 'flex';
-    topSection.style.justifyContent = 'space-between';
-    topSection.style.alignItems = 'center';
-    topSection.style.gap = '20px';
+    const currencyInfo = document.createElement('div');
+    currencyInfo.style.display = 'flex';
+    currencyInfo.style.alignItems = 'center';
 
-    // دارک مود
-    const darkModeSection = document.createElement('div');
-    darkModeSection.classList.add('settings-section');
-    const darkModeLabel = document.createElement('label');
-    const darkModeToggle = document.createElement('input');
-    darkModeToggle.type = 'checkbox';
-    darkModeToggle.checked = document.body.classList.contains('dark-mode');
-    darkModeToggle.addEventListener('change', () => {
-        document.body.classList.toggle('dark-mode', darkModeToggle.checked);
-        localStorage.setItem('darkMode', darkModeToggle.checked);
-    });
-    darkModeLabel.textContent = ' Dark Mode ';
-    darkModeLabel.prepend(darkModeToggle);
-    darkModeSection.appendChild(darkModeLabel);
+    currencyInfo.appendChild(flag);
+    currencyInfo.appendChild(label);
+    item.appendChild(currencyInfo);
 
-    // دکمه Manage Cards
-    const cardSection = document.createElement('div');
-    cardSection.classList.add('settings-section');
-    const cardBtn = document.createElement('button');
-    cardBtn.textContent = 'Manage Cards';
-    cardBtn.classList.add('card-btn');
-    cardBtn.addEventListener('click', () => {
-        modal.remove();
-        openCurrencySelector();
-    });
-    cardSection.appendChild(cardBtn);
+    const controls = document.createElement('div');
+    controls.style.display = 'flex';
+    controls.style.gap = '5px';
 
-    // گذاشتن دوتا آیتم کنار هم
-    topSection.appendChild(darkModeSection);
-    topSection.appendChild(cardSection);
+    if (type === 'add') {
+        const addButton = document.createElement('button');
+        addButton.innerHTML = '<i class="ph ph-arrow-right"></i>';
+        addButton.classList.add('reorder-btn');
+        addButton.addEventListener('click', () => {
+            userCurrencies.push(currency.code);
+            localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+            updateCurrencyData();
+            renderLists();
+        });
+        controls.appendChild(addButton);
+    } else {
+        if (index > 0) {
+            const upButton = document.createElement('button');
+            upButton.innerHTML = '<i class="ph ph-arrow-up"></i>';
+            upButton.classList.add('reorder-btn');
+            upButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                [userCurrencies[index], userCurrencies[index - 1]] = [userCurrencies[index - 1], userCurrencies[index]];
+                localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+                updateCurrencyData();
+                renderLists();
+            });
+            controls.appendChild(upButton);
+        }
 
-    // بخش تغییر اندازه Grid
-    const gridSection = document.createElement('div');
-    gridSection.classList.add('settings-section');
-    const gridLabel = document.createElement('label');
-    gridLabel.textContent = 'Cards Size: ';
-    const gridInput = document.createElement('input');
-    gridInput.type = 'number';
-    gridInput.classList.add('grid-Input');
-    gridInput.value = localStorage.getItem('gridSize') || 155;
-    gridInput.addEventListener('input', () => {
-        const size = gridInput.value || 155;
-        document.documentElement.style.setProperty('--grid-size', size + 'px');
-        localStorage.setItem('gridSize', size);
-    });
-    gridLabel.appendChild(gridInput);
-    gridSection.appendChild(gridLabel);
+        if (index < totalSelected - 1) {
+            const downButton = document.createElement('button');
+            downButton.innerHTML = '<i class="ph ph-arrow-down"></i>';
+            downButton.classList.add('reorder-btn');
+            downButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                [userCurrencies[index], userCurrencies[index + 1]] = [userCurrencies[index + 1], userCurrencies[index]];
+                localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+                updateCurrencyData();
+                renderLists();
+            });
+            controls.appendChild(downButton);
+        }
 
-    modalContent.appendChild(closeButton);
-    modalContent.appendChild(topSection); // دارک مود و دکمه Manage Cards کنار هم
-    modalContent.appendChild(gridSection);
+        const removeButton = document.createElement('button');
+        removeButton.innerHTML = '<i class="ph ph-trash"></i>';
+        removeButton.classList.add('reorder-btn', 'remove-btn');
+        removeButton.addEventListener('click', () => {
+            userCurrencies = userCurrencies.filter(code => code !== currency.code);
+            localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+            updateCurrencyData();
+            renderLists();
+        });
+        controls.appendChild(removeButton);
+    }
 
-    modal.appendChild(modalContent);
-    document.body.appendChild(modal);
+    item.appendChild(controls);
+    return item;
+}
+
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    updateThemeToggleButton();
+}
+
+function updateThemeToggleButton() {
+    const themeToggleButton = document.getElementById('theme-toggle-btn');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    themeToggleButton.innerHTML = isDarkMode ? '<i class="ph ph-sun"></i>' : '<i class="ph ph-moon"></i>';
 }
 
 // اجرای تنظیمات در لود صفحه
 document.addEventListener('DOMContentLoaded', () => {
     // دکمه تنظیمات
-    document.getElementById('settings-btn').addEventListener('click', openSettings);
+    document.getElementById('settings-btn').addEventListener('click', openCurrencySelector);
+
+    // دکمه تغییر تم
+    document.getElementById('theme-toggle-btn').addEventListener('click', toggleTheme);
 
     // دارک مود ذخیره‌شده
     if (localStorage.getItem('darkMode') === 'true') {
         document.body.classList.add('dark-mode');
     }
-
-    // اندازه grid ذخیره‌شده
-    const gridSize = localStorage.getItem('gridSize') || 155;
-    document.documentElement.style.setProperty('--grid-size', gridSize + 'px');
+    updateThemeToggleButton();
 });
 
 
@@ -229,7 +354,7 @@ function formatPrice(price) {
     } else if (price >= 1) {
         return price.toLocaleString('en-US');
     } else if (price > 0) {
-        return price.toExponential(3); 
+        return price.toExponential(3);
     } else {
         return "0";
     }
@@ -257,7 +382,17 @@ async function updateCurrencyData() {
     }
 
     const requests = userCurrencies.map(code => data.currencies.find(c => c.code === code));
-    
+
+    if (requests.length === 0) {
+        const message = document.createElement('p');
+        message.textContent = "No currencies selected. Go to settings to add some.";
+        message.style.textAlign = 'center';
+        message.style.fontSize = '1.2rem';
+        message.style.marginTop = '20px';
+        grid.replaceChildren(message);
+        return;
+    }
+
     requests.forEach(currency => {
         if (currency) {
             const card = createCard(currency);
@@ -299,6 +434,69 @@ async function updateCurrencyData() {
 
 // دریافت داده‌ها هنگام لود صفحه
 updateCurrencyData();
+
+function openCalculatorModal(currency) {
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    const modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content');
+    modalContent.style.textAlign = 'center';
+
+    const closeButton = document.createElement('span');
+    closeButton.classList.add('close');
+    closeButton.innerHTML = '<i class="ph ph-x"></i>';
+    closeButton.addEventListener('click', () => modal.remove());
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    });
+
+    const icon = document.createElement('img');
+    icon.src = currency.icon;
+
+    const name = document.createElement('h2');
+    name.textContent = currency.en;
+
+    const priceContainer = document.createElement('div');
+    priceContainer.style.display = 'flex';
+    priceContainer.style.alignItems = 'center';
+    priceContainer.style.justifyContent = 'center';
+    priceContainer.style.gap = '4px';
+
+    const price = document.createElement('p');
+    price.textContent = formatPrice(currency.price);
+    price.id = 'modal-currency-price'; // Add an ID for easy access
+
+    const copyButton = document.createElement('button');
+    copyButton.classList.add('copy-btn');
+    copyButton.innerHTML = '<i class="ph ph-copy"></i>';
+    copyButton.title = 'Copy price';
+    copyButton.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText(currency.price.toString());
+            copyButton.innerHTML = '<i class="ph ph-check"></i>';
+            setTimeout(() => {
+                copyButton.innerHTML = '<i class="ph ph-copy"></i>';
+            }, 1500);
+        } catch (err) {
+            console.error('Failed to copy: ', err);
+        }
+    });
+
+    priceContainer.appendChild(price);
+    priceContainer.appendChild(copyButton);
+
+    modalContent.appendChild(closeButton);
+    modalContent.appendChild(icon);
+    modalContent.appendChild(name);
+    modalContent.appendChild(priceContainer);
+
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+}
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {

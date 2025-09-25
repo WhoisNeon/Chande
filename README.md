@@ -23,7 +23,7 @@
 
 ## 👋 About Chande!?
 
-Chande!? is a simple, fast, and customizable web application designed to display real-time currency exchange rates. It allows users to select and reorder their preferred currencies, toggle between dark and light themes, and use a built-in calculator for quick conversions. Built as a Progressive Web App (PWA), it offers a seamless experience across devices.
+Chande!? is a simple, fast, and customizable web application designed to display real-time currency exchange rates. It allows users to select and reorder their preferred currencies, toggle between dark and light themes. Built as a Progressive Web App (PWA), it offers a seamless experience across devices.
 
 ---
 
@@ -31,7 +31,7 @@ Chande!? is a simple, fast, and customizable web application designed to display
 
 -   **Real-time Currency Rates:** Displays up-to-date exchange rates for various currencies.
 -   **Customizable Currency List:** Users can add, remove, and reorder currencies to personalize their view.
--   **Interactive Calculator:** A modal calculator allows for quick conversions and copying of prices.
+-   **Interactive Price:** A modal price allows for quick view and copying of prices.
 -   **Theme Toggle:** Seamlessly switch between dark and light modes.
 -   **Responsive Design:** Optimized for a consistent experience on desktops, tablets, and mobile devices.
 -   **Progressive Web App (PWA):** Installable and works offline, providing an app-like experience.
@@ -75,7 +75,7 @@ Chande!? is a simple, fast, and customizable web application designed to display
 1.  **View Rates:** Open `index.html` in your browser to see current currency rates.
 2.  **Customize Currencies:** Click the settings icon (<i class="ph ph-gear"></i>) to open the currency selector. Add, remove, or reorder currencies.
 3.  **Toggle Theme:** Use the theme toggle button (<i class="ph ph-sun"></i> / <i class="ph ph-moon"></i>) to switch between light and dark modes.
-4.  **Use Calculator:** Click on any currency card to open a calculator modal, view its price, and copy it to the clipboard.
+4.  **Copy Price:** Click on any currency card to open a price modal, view its price, and copy it to the clipboard.
 
 ### Local Setup
 

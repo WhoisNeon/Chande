@@ -1,8 +1,6 @@
 const apiUrl = 'https://raw.githubusercontent.com/CertMusashi/Chande-api/refs/heads/main/arz.json?' + new Date().getTime();
 let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd", "eur", "18ayar", "btc"];
 
-//.
-
 function createCard(currency) {
     const card = document.createElement('div');
     card.classList.add('card');
@@ -45,7 +43,7 @@ function createCard(currency) {
     card.appendChild(currencyInfo);
     card.appendChild(priceInfo);
 
-    card.addEventListener('click', () => openCalculatorModal(currency));
+    card.addEventListener('click', () => openPriceModal(currency, card.querySelector('.change').textContent, card.querySelector('.change').classList.contains('positive')));
 
     return card;
 }
@@ -55,10 +53,7 @@ function openCurrencySelector() {
     modal.classList.add('modal');
 
     const modalContent = document.createElement('div');
-    modalContent.classList.add('modal-content');
-    modalContent.style.display = 'flex';
-    modalContent.style.flexDirection = 'column';
-    modalContent.style.width = '90%';
+    modalContent.classList.add('modal-content', 'currency-selector');
 
     const closeButton = document.createElement('span');
     closeButton.classList.add('close');
@@ -72,14 +67,13 @@ function openCurrencySelector() {
     });
 
     const leftColumn = document.createElement('div');
-    leftColumn.classList.add('modal-column');
-    leftColumn.style.padding = '10px';
+    leftColumn.classList.add('modal-column', 'modal-section');
 
     const rightColumn = document.createElement('div');
-    rightColumn.classList.add('modal-column');
-    rightColumn.style.padding = '10px';
+    rightColumn.classList.add('modal-column', 'modal-section');
 
     const leftTitle = document.createElement('h3');
+    leftTitle.classList.add('modal-title');
     leftTitle.innerHTML = '<i class="ph ph-list"></i> Available Currencies';
     const leftSearchBox = document.createElement('input');
     leftSearchBox.type = 'text';
@@ -88,6 +82,7 @@ function openCurrencySelector() {
     leftSearchBox.addEventListener('input', renderLists);
 
     const rightTitle = document.createElement('h3');
+    rightTitle.classList.add('modal-title', 'modal-title-right');
     rightTitle.innerHTML = '<i class="ph ph-list-checks"></i> Selected Currencies';
     const rightSearchBox = document.createElement('input');
     rightSearchBox.type = 'text';
@@ -97,13 +92,9 @@ function openCurrencySelector() {
 
     const leftList = document.createElement('div');
     leftList.classList.add('currency-list');
-    leftList.style.maxHeight = '30vh';
-    leftList.style.overflowY = 'auto';
 
     const rightList = document.createElement('div');
     rightList.classList.add('currency-list');
-    rightList.style.maxHeight = '30vh';
-    rightList.style.overflowY = 'auto';
 
     leftColumn.appendChild(leftTitle);
     leftColumn.appendChild(leftSearchBox);
@@ -140,8 +131,8 @@ function openCurrencySelector() {
 
                 if (availableCurrencies.length === 0) {
                     const message = document.createElement('p');
+                    message.classList.add('no-currencies-message');
                     message.textContent = leftSearchTerm ? "No matching currencies found." : "All currencies selected.";
-                    message.style.textAlign = 'center';
                     leftList.appendChild(message);
                 } else {
                     availableCurrencies.forEach(currency => {
@@ -152,8 +143,8 @@ function openCurrencySelector() {
 
                 if (selectedCurrencies.length === 0) {
                     const message = document.createElement('p');
+                    message.classList.add('no-currencies-message');
                     message.textContent = rightSearchTerm ? "No matching currencies found." : "No currencies selected.";
-                    message.style.textAlign = 'center';
                     rightList.appendChild(message);
                 } else {
                     selectedCurrencies.forEach((currency, index) => {
@@ -173,15 +164,13 @@ function openCurrencySelector() {
                         new Sortable(leftList, {
                             group: 'currencies',
                             animation: 150,
-                            sort: false, // Prevent reordering in the available column
-                            // onAdd is removed here, as removal from userCurrencies is handled by rightList's onRemove
+                            sort: false,
                         });
 
                         new Sortable(rightList, {
                             group: 'currencies',
                             animation: 150,
                             onAdd: function (evt) {
-                                // This fires when an item is dragged from leftList to rightList (selecting it)
                                 const code = evt.item.dataset.code;
                                 userCurrencies.splice(evt.newIndex, 0, code);
                                 localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
@@ -189,7 +178,6 @@ function openCurrencySelector() {
                                 renderLists();
                             },
                             onRemove: function (evt) {
-                                // This fires when an item is dragged from rightList to leftList (deselecting/deleting it)
                                 const code = evt.item.dataset.code;
                                 userCurrencies = userCurrencies.filter(c => c !== code);
                                 localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
@@ -197,12 +185,10 @@ function openCurrencySelector() {
                                 renderLists();
                             },
                             onUpdate: function (evt) {
-                                // This fires when an item is reordered within the rightList
                                 const code = evt.item.dataset.code;
                                 const oldIndex = evt.oldIndex;
                                 const newIndex = evt.newIndex;
 
-                                // Reorder the userCurrencies array
                                 const [removed] = userCurrencies.splice(oldIndex, 1);
                                 userCurrencies.splice(newIndex, 0, removed);
 
@@ -239,16 +225,14 @@ function openCurrencySelector() {
     label.textContent = `${currency.en} (${currency.code.toUpperCase()})`;
 
     const currencyInfo = document.createElement('div');
-    currencyInfo.style.display = 'flex';
-    currencyInfo.style.alignItems = 'center';
+    currencyInfo.classList.add('currency-info-item');
 
     currencyInfo.appendChild(flag);
     currencyInfo.appendChild(label);
     item.appendChild(currencyInfo);
 
     const controls = document.createElement('div');
-    controls.style.display = 'flex';
-    controls.style.gap = '5px';
+    controls.classList.add('controls');
 
     if (type === 'add') {
         const addButton = document.createElement('button');
@@ -318,15 +302,11 @@ function updateThemeToggleButton() {
     themeToggleButton.innerHTML = isDarkMode ? '<i class="ph ph-sun"></i>' : '<i class="ph ph-moon"></i>';
 }
 
-// اجرای تنظیمات در لود صفحه
 document.addEventListener('DOMContentLoaded', () => {
-    // دکمه تنظیمات
     document.getElementById('settings-btn').addEventListener('click', openCurrencySelector);
 
-    // دکمه تغییر تم
     document.getElementById('theme-toggle-btn').addEventListener('click', toggleTheme);
 
-    // دارک مود ذخیره‌شده
     if (localStorage.getItem('darkMode') === 'true') {
         document.body.classList.add('dark-mode');
     }
@@ -380,10 +360,8 @@ async function updateCurrencyData() {
 
     if (!data.currencies) {
         const message = document.createElement('p');
+        message.classList.add('no-currencies-message');
         message.textContent = "Updating, we'll be back soon :)";
-        message.style.textAlign = 'center';
-        message.style.fontSize = '1.2rem';
-        message.style.marginTop = '20px';
 
         grid.replaceChildren(message);
         return;
@@ -393,10 +371,8 @@ async function updateCurrencyData() {
 
     if (requests.length === 0) {
         const message = document.createElement('p');
+        message.classList.add('no-currencies-message');
         message.textContent = "No currencies selected. Go to settings to add some.";
-        message.style.textAlign = 'center';
-        message.style.fontSize = '1.2rem';
-        message.style.marginTop = '20px';
         grid.replaceChildren(message);
         return;
     }
@@ -410,27 +386,21 @@ async function updateCurrencyData() {
 
             let currentPrice = currency.price;
 
-            // دریافت قیمت قبلی از localStorage (خام)
             const lastSeenPrice = getLastSeenPrice(currency.code);
 
-            // محاسبه تغییرات قیمت
             const priceChange = Math.floor(calculatePriceChange(currentPrice, lastSeenPrice));
 
-            // نمایش تغییرات قیمت
             if (priceChange > 0) {
                 changeElement.textContent = `↑ ${priceChange.toLocaleString('en-US')}`;
-                changeElement.style.color = '#2ecc71';
+                changeElement.classList.add('positive');
             } else if (priceChange < 0) {
                 changeElement.textContent = `↓ ${Math.abs(priceChange).toLocaleString('en-US')}`;
-                changeElement.style.color = '#e74c3c';
             } else {
                 changeElement.textContent = '';
             }
 
-            // ذخیره قیمت جدید در localStorage به صورت خام
             saveLastSeenPrice(currency.code, currentPrice);
 
-            // نمایش قیمت با فرمت
             priceElement.textContent = formatPrice(currentPrice);
 
             fragment.appendChild(card);
@@ -440,16 +410,14 @@ async function updateCurrencyData() {
     grid.replaceChildren(fragment);
 }
 
-// دریافت داده‌ها هنگام لود صفحه
 updateCurrencyData();
 
-function openCalculatorModal(currency) {
+function openPriceModal(currency, changeText, isPositive) {
     const modal = document.createElement('div');
     modal.classList.add('modal');
 
     const modalContent = document.createElement('div');
-    modalContent.classList.add('modal-content');
-    modalContent.style.textAlign = 'center';
+    modalContent.classList.add('modal-content', 'price-modal');
 
     const closeButton = document.createElement('span');
     closeButton.classList.add('close');
@@ -468,20 +436,27 @@ function openCalculatorModal(currency) {
     const name = document.createElement('h2');
     name.textContent = currency.en;
 
+    const code = document.createElement('p');
+    code.classList.add('code');
+    code.textContent = currency.code.toUpperCase();
+
+    const change = document.createElement('p');
+    change.classList.add('change');
+    change.textContent = changeText;
+    if (isPositive) {
+        change.classList.add('positive');
+    }
+
     const priceContainer = document.createElement('div');
-    priceContainer.style.display = 'flex';
-    priceContainer.style.alignItems = 'center';
-    priceContainer.style.justifyContent = 'center';
-    priceContainer.style.gap = '4px';
+    priceContainer.id = 'price-container';
 
     const price = document.createElement('p');
     price.textContent = formatPrice(currency.price);
-    price.id = 'modal-currency-price'; // Add an ID for easy access
+    price.id = 'modal-currency-price';
 
     const copyButton = document.createElement('button');
     copyButton.classList.add('copy-btn');
     copyButton.innerHTML = '<i class="ph ph-copy"></i>';
-    copyButton.title = 'Copy price';
     copyButton.addEventListener('click', async () => {
         try {
             await navigator.clipboard.writeText(currency.price.toString());
@@ -500,6 +475,8 @@ function openCalculatorModal(currency) {
     modalContent.appendChild(closeButton);
     modalContent.appendChild(icon);
     modalContent.appendChild(name);
+    modalContent.appendChild(code);
+    modalContent.appendChild(change);
     modalContent.appendChild(priceContainer);
 
     modal.appendChild(modalContent);

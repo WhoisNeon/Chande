@@ -73,7 +73,7 @@ function openCurrencySelector() {
     rightColumn.classList.add('modal-column', 'modal-section');
 
     const leftTitle = document.createElement('h3');
-    leftTitle.classList.add('modal-title');
+    leftTitle.classList.add('modal-title', 'modal-title-left');
     leftTitle.innerHTML = '<i class="ph ph-list"></i> Available Currencies';
     const leftSearchBox = document.createElement('input');
     leftSearchBox.type = 'text';
@@ -107,115 +107,120 @@ function openCurrencySelector() {
     modalContent.appendChild(leftColumn);
     modalContent.appendChild(rightColumn);
 
-            let allCurrencies = [];
+    const footer = document.createElement('div');
+    footer.classList.add('modal-footer');
+    footer.innerHTML = 'Made with ❤️ by <a href="https://github.com/WhoisNeon" target="_blank">WhoisNeon</a>';
+    modalContent.appendChild(footer);
 
-            function isTouchDevice() {
-                return ('ontouchstart' in window) ||
-                    (navigator.maxTouchPoints > 0) ||
-                    (navigator.msMaxTouchPoints > 0);
-            }
+    let allCurrencies = [];
 
-            function renderLists() {
-                leftList.innerHTML = '';
-                rightList.innerHTML = '';
+    function isTouchDevice() {
+        return ('ontouchstart' in window) ||
+            (navigator.maxTouchPoints > 0) ||
+            (navigator.msMaxTouchPoints > 0);
+    }
 
-                const leftSearchTerm = leftSearchBox.value.toLowerCase();
-                const rightSearchTerm = rightSearchBox.value.toLowerCase();
+    function renderLists() {
+        leftList.innerHTML = '';
+        rightList.innerHTML = '';
 
-                const selectedCurrencies = userCurrencies
-                    .map(code => allCurrencies.find(c => c.code === code))
-                    .filter(c => c && (c.en.toLowerCase().includes(rightSearchTerm) || c.code.toLowerCase().includes(rightSearchTerm)));
+        const leftSearchTerm = leftSearchBox.value.toLowerCase();
+        const rightSearchTerm = rightSearchBox.value.toLowerCase();
 
-                const availableCurrencies = allCurrencies.filter(c => !userCurrencies.includes(c.code) &&
-                    (c.en.toLowerCase().includes(leftSearchTerm) || c.code.toLowerCase().includes(leftSearchTerm)));
+        const selectedCurrencies = userCurrencies
+            .map(code => allCurrencies.find(c => c.code === code))
+            .filter(c => c && (c.en.toLowerCase().includes(rightSearchTerm) || c.code.toLowerCase().includes(rightSearchTerm)));
 
-                if (availableCurrencies.length === 0) {
-                    const message = document.createElement('p');
-                    message.classList.add('no-currencies-message');
-                    message.textContent = leftSearchTerm ? "No matching currencies found." : "All currencies selected.";
-                    leftList.appendChild(message);
-                } else {
-                    availableCurrencies.forEach(currency => {
-                        const item = createCurrencyItem(currency, 'add', null, null, renderLists);
-                        leftList.appendChild(item);
-                    });
-                }
+        const availableCurrencies = allCurrencies.filter(c => !userCurrencies.includes(c.code) &&
+            (c.en.toLowerCase().includes(leftSearchTerm) || c.code.toLowerCase().includes(leftSearchTerm)));
 
-                if (selectedCurrencies.length === 0) {
-                    const message = document.createElement('p');
-                    message.classList.add('no-currencies-message');
-                    message.textContent = rightSearchTerm ? "No matching currencies found." : "No currencies selected.";
-                    rightList.appendChild(message);
-                } else {
-                    selectedCurrencies.forEach((currency, index) => {
-                        const item = createCurrencyItem(currency, 'remove', index, selectedCurrencies.length, renderLists);
-                        rightList.appendChild(item);
-                    });
-                }
-            }
-
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    allCurrencies = data.currencies;
-                    renderLists();
-
-                    if (!isTouchDevice()) {
-                        new Sortable(leftList, {
-                            group: 'currencies',
-                            animation: 150,
-                            sort: false,
-                        });
-
-                        new Sortable(rightList, {
-                            group: 'currencies',
-                            animation: 150,
-                            onAdd: function (evt) {
-                                const code = evt.item.dataset.code;
-                                userCurrencies.splice(evt.newIndex, 0, code);
-                                localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
-                                updateCurrencyData();
-                                renderLists();
-                            },
-                            onRemove: function (evt) {
-                                const code = evt.item.dataset.code;
-                                userCurrencies = userCurrencies.filter(c => c !== code);
-                                localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
-                                updateCurrencyData();
-                                renderLists();
-                            },
-                            onUpdate: function (evt) {
-                                const code = evt.item.dataset.code;
-                                const oldIndex = evt.oldIndex;
-                                const newIndex = evt.newIndex;
-
-                                const [removed] = userCurrencies.splice(oldIndex, 1);
-                                userCurrencies.splice(newIndex, 0, removed);
-
-                                localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
-                                updateCurrencyData();
-                                renderLists();
-                            }
-                        });
-                    }
-                });
-
-            modal.appendChild(modalContent);
-            document.body.appendChild(modal);
+        if (availableCurrencies.length === 0) {
+            const message = document.createElement('p');
+            message.classList.add('no-currencies-message');
+            message.textContent = leftSearchTerm ? "No matching currencies found." : "All currencies selected.";
+            leftList.appendChild(message);
+        } else {
+            availableCurrencies.forEach(currency => {
+                const item = createCurrencyItem(currency, 'add', null, null, renderLists);
+                leftList.appendChild(item);
+            });
         }
 
-        function createCurrencyItem(currency, type, index, totalSelected, renderLists) {
-            const item = document.createElement('div');
-            item.classList.add('currency-item');
-            item.dataset.code = currency.code;
-            if (type === 'add') {
-                item.addEventListener('click', () => {
-                    userCurrencies.push(currency.code);
-                    localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
-                    updateCurrencyData();
-                    renderLists();
+        if (selectedCurrencies.length === 0) {
+            const message = document.createElement('p');
+            message.classList.add('no-currencies-message');
+            message.textContent = rightSearchTerm ? "No matching currencies found." : "No currencies selected.";
+            rightList.appendChild(message);
+        } else {
+            selectedCurrencies.forEach((currency, index) => {
+                const item = createCurrencyItem(currency, 'remove', index, selectedCurrencies.length, renderLists);
+                rightList.appendChild(item);
+            });
+        }
+    }
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            allCurrencies = data.currencies;
+            renderLists();
+
+            if (!isTouchDevice()) {
+                new Sortable(leftList, {
+                    group: 'currencies',
+                    animation: 150,
+                    sort: false,
+                });
+
+                new Sortable(rightList, {
+                    group: 'currencies',
+                    animation: 150,
+                    onAdd: function (evt) {
+                        const code = evt.item.dataset.code;
+                        userCurrencies.splice(evt.newIndex, 0, code);
+                        localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+                        updateCurrencyData();
+                        renderLists();
+                    },
+                    onRemove: function (evt) {
+                        const code = evt.item.dataset.code;
+                        userCurrencies = userCurrencies.filter(c => c !== code);
+                        localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+                        updateCurrencyData();
+                        renderLists();
+                    },
+                    onUpdate: function (evt) {
+                        const code = evt.item.dataset.code;
+                        const oldIndex = evt.oldIndex;
+                        const newIndex = evt.newIndex;
+
+                        const [removed] = userCurrencies.splice(oldIndex, 1);
+                        userCurrencies.splice(newIndex, 0, removed);
+
+                        localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+                        updateCurrencyData();
+                        renderLists();
+                    }
                 });
             }
+        });
+
+    modal.appendChild(modalContent);
+    document.body.appendChild(modal);
+}
+
+function createCurrencyItem(currency, type, index, totalSelected, renderLists) {
+    const item = document.createElement('div');
+    item.classList.add('currency-item');
+    item.dataset.code = currency.code;
+    if (type === 'add') {
+        item.addEventListener('click', () => {
+            userCurrencies.push(currency.code);
+            localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+            updateCurrencyData();
+            renderLists();
+        });
+    }
 
     const flag = document.createElement('img');
     flag.classList.add('flag');

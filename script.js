@@ -238,12 +238,6 @@ function openCurrencySelector() {
         const addButton = document.createElement('button');
         addButton.innerHTML = '<i class="ph ph-arrow-right"></i>';
         addButton.classList.add('reorder-btn');
-        addButton.addEventListener('click', () => {
-            userCurrencies.push(currency.code);
-            localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
-            updateCurrencyData();
-            renderLists();
-        });
         controls.appendChild(addButton);
     } else {
         if (index > 0) {

@@ -1,7 +1,7 @@
 <p align="center">
   <a href="#"><img src="https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge"></a>
   <a href="#"><img src="https://img.shields.io/badge/version-1.0.0-blue?style=for-the-badge"></a>
-  <a href="https://whoisneon.github.io/Chande"><img src="https://img.shields.io/badge/demo-online-purple?style=for-the-badge"></a>
+  <a href="https://chande.zeabur.app"><img src="https://img.shields.io/badge/demo-online-purple?style=for-the-badge"></a>
 </p>
 
 ---
@@ -66,7 +66,7 @@ Chande!? is a simple, fast, and customizable web application designed to display
 
 ## 🔴 Live Demo
 
-[![Live Demo](https://img.shields.io/badge/Chande-Live%20Demo-green?style=for-the-badge)](https://whoisneon.github.io/Chande)
+[![Live Demo](https://img.shields.io/badge/Chande-Live%20Demo-green?style=for-the-badge)](https://chande.zeabur.app)
 
 ---
 

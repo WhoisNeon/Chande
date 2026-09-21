@@ -1,4 +1,4 @@
-const fiatGoldApiUrl = 'https://nerkhban.cyou/api/bon?' + new Date().getTime();
+const fiatGoldApiUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://nerkhban.cyou/api/bon?' + new Date().getTime());
 const cryptoApiUrl = 'https://api.bitpin.org/api/v1/mkt/tickers/';
 
 let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd", "eur", "18ayar", "btc"];

@@ -5,7 +5,7 @@ let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd
 let currencyMeta = {};
 
 async function loadCurrencyMeta() {
-    const response = await fetch('currency-meta.json');
+    const response = await fetch('src/currency-meta.json');
     currencyMeta = await response.json();
 }
 
@@ -524,7 +524,7 @@ function openPriceModal(currency, changeText, isPositive) {
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js')
+        navigator.serviceWorker.register('src/service-worker.js')
             .then(registration => console.log('Service Worker registered:', registration.scope))
             .catch(error => console.error('Service Worker registration failed:', error));
     });

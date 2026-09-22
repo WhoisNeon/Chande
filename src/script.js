@@ -1,8 +1,70 @@
 const fiatGoldApiUrl = 'https://api.x4d1udxvyt.workers.dev/bonbast';
 const cryptoApiUrl = 'https://api.bitpin.org/api/v1/mkt/tickers/';
 
-let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd", "eur", "18ayar", "usdt", "btc"];
+const DEFAULT_CURRENCIES = ["usd", "eur", "18ayar", "usdt", "btc"];
+
+// Reads the stored selection defensively: older versions could persist corrupted
+// entries (nulls, duplicates), which made reordering move the wrong items.
+function loadStoredSelection() {
+    let stored = null;
+    try {
+        stored = JSON.parse(localStorage.getItem('userCurrencies'));
+    } catch (error) {
+        stored = null;
+    }
+    if (!Array.isArray(stored)) return [...DEFAULT_CURRENCIES];
+
+    const cleaned = [...new Set(stored.filter(code => typeof code === 'string' && code.length > 0))];
+    if (cleaned.length > 0) return cleaned;
+
+    // An intentionally emptied selection stays empty; anything else falls back to defaults.
+    return stored.length === 0 ? [] : [...DEFAULT_CURRENCIES];
+}
+
+let userCurrencies = loadStoredSelection();
 let currencyMeta = {};
+
+function saveUserCurrencies() {
+    localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+}
+
+// Swaps two codes in the selection and returns a new array (null when a code is unknown).
+function swapSelectionCodes(selection, codeA, codeB) {
+    const indexA = selection.indexOf(codeA);
+    const indexB = selection.indexOf(codeB);
+    if (indexA === -1 || indexB === -1 || indexA === indexB) return null;
+
+    const next = [...selection];
+    [next[indexA], next[indexB]] = [next[indexB], next[indexA]];
+    return next;
+}
+
+// Rebuilds the selection so its visible entries match the order of the items currently
+// rendered in the selected list. Entries hidden by an active search (or missing from the
+// fetched currency data) keep their place, so drag & drop stays correct when filtered.
+function alignSelectionToDom(selection, domCodes, excludeCode) {
+    const visibleCodes = domCodes.filter(code => code !== excludeCode);
+    const visibleSet = new Set(visibleCodes);
+
+    const aligned = [];
+    let next = 0;
+    for (const code of selection) {
+        if (visibleSet.has(code)) {
+            aligned.push(next < visibleCodes.length ? visibleCodes[next++] : code);
+        } else {
+            aligned.push(code);
+        }
+    }
+    while (next < visibleCodes.length) aligned.push(visibleCodes[next++]);
+    return aligned;
+}
+
+// Currency codes of the items (not status messages) currently rendered in a list.
+function getDomCodes(container) {
+    return Array.from(container.children)
+        .map(child => child.dataset && child.dataset.code)
+        .filter(Boolean);
+}
 
 async function loadCurrencyMeta() {
     const response = await fetch('src/currency-meta.json');
@@ -125,12 +187,6 @@ function openCurrencySelector() {
 
     let allCurrencies = [];
 
-    function isTouchDevice() {
-        return ('ontouchstart' in window) ||
-            (navigator.maxTouchPoints > 0) ||
-            (navigator.msMaxTouchPoints > 0);
-    }
-
     function renderLists() {
         leftList.innerHTML = '';
         rightList.innerHTML = '';
@@ -152,7 +208,7 @@ function openCurrencySelector() {
             leftList.appendChild(message);
         } else {
             availableCurrencies.forEach(currency => {
-                const item = createCurrencyItem(currency, 'add', null, null, renderLists);
+                const item = createCurrencyItem(currency, 'add', null, renderLists);
                 leftList.appendChild(item);
             });
         }
@@ -163,11 +219,22 @@ function openCurrencySelector() {
             message.textContent = rightSearchTerm ? "No matching currencies found." : "No currencies selected.";
             rightList.appendChild(message);
         } else {
-            selectedCurrencies.forEach((currency, index) => {
-                const item = createCurrencyItem(currency, 'remove', index, selectedCurrencies.length, renderLists);
+            const visibleCodes = selectedCurrencies.map(c => c.code);
+            selectedCurrencies.forEach(currency => {
+                const item = createCurrencyItem(currency, 'remove', visibleCodes, renderLists);
                 rightList.appendChild(item);
             });
         }
+    }
+
+    // Persists the current selection and refreshes the modal lists and the grid.
+    // The re-render is deferred so Sortable can finish its own DOM work first;
+    // otherwise wiping innerHTML mid-drop detaches nodes Sortable is still using.
+    function commitSelectionChange(excludeCode) {
+        userCurrencies = alignSelectionToDom(userCurrencies, getDomCodes(rightList), excludeCode);
+        saveUserCurrencies();
+        updateCurrencyData();
+        setTimeout(renderLists, 0);
     }
 
     fetchCurrencyData().then(data => {
@@ -175,60 +242,53 @@ function openCurrencySelector() {
             allCurrencies = data.currencies;
             renderLists();
 
-            if (!isTouchDevice()) {
-                new Sortable(leftList, {
-                    group: 'currencies',
-                    animation: 150,
-                    sort: false,
-                    handle: '.drag-handle',
-                });
+            const sharedOptions = {
+                group: { name: 'currencies', pull: true, put: true },
+                animation: 150,
+                handle: '.drag-handle',
+                // Drag & drop works on touch devices too, but a short delay keeps
+                // scrolling the lists usable alongside dragging.
+                delay: 150,
+                delayOnTouchOnly: true,
+                touchStartThreshold: 10,
+            };
 
-                new Sortable(rightList, {
-                    group: 'currencies',
-                    animation: 150,
-                    handle: '.drag-handle',
-                    onAdd: function (evt) {
-                        const code = evt.item.dataset.code;
-                        userCurrencies.splice(evt.newIndex, 0, code);
-                        localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
-                        updateCurrencyData();
-                        renderLists();
-                    },
-                    onRemove: function (evt) {
-                        const code = evt.item.dataset.code;
-                        userCurrencies = userCurrencies.filter(c => c !== code);
-                        localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
-                        updateCurrencyData();
-                        renderLists();
-                    },
-                    onUpdate: function (evt) {
-                        const code = evt.item.dataset.code;
-                        const oldIndex = evt.oldIndex;
-                        const newIndex = evt.newIndex;
+            new Sortable(leftList, { ...sharedOptions, sort: false });
 
-                        const [removed] = userCurrencies.splice(oldIndex, 1);
-                        userCurrencies.splice(newIndex, 0, removed);
-
-                        localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
-                        updateCurrencyData();
-                        renderLists();
+            new Sortable(rightList, {
+                ...sharedOptions,
+                onAdd: function (evt) {
+                    const code = evt.item && evt.item.dataset ? evt.item.dataset.code : '';
+                    if (!code) return;
+                    if (!userCurrencies.includes(code)) {
+                        userCurrencies = [...userCurrencies, code];
                     }
-                });
-            }
+                    commitSelectionChange();
+                },
+                onRemove: function (evt) {
+                    const code = evt.item && evt.item.dataset ? evt.item.dataset.code : '';
+                    if (!code) return;
+                    userCurrencies = userCurrencies.filter(c => c !== code);
+                    commitSelectionChange(code);
+                },
+                onUpdate: function () {
+                    commitSelectionChange();
+                },
+            });
         });
 
     modal.appendChild(modalContent);
     document.body.appendChild(modal);
 }
 
-function createCurrencyItem(currency, type, index, totalSelected, renderLists) {
+function createCurrencyItem(currency, type, visibleCodes, renderLists) {
     const item = document.createElement('div');
     item.classList.add('currency-item');
     item.dataset.code = currency.code;
     if (type === 'add') {
         item.addEventListener('click', () => {
             userCurrencies.push(currency.code);
-            localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+            saveUserCurrencies();
             updateCurrencyData();
             renderLists();
         });
@@ -262,30 +322,39 @@ function createCurrencyItem(currency, type, index, totalSelected, renderLists) {
         addButton.classList.add('reorder-btn');
         controls.appendChild(addButton);
     } else {
+        // Move by currency codes, never by list indexes: the visible list can be
+        // filtered by search or missing entries, so indexes no longer line up
+        // with `userCurrencies` and index-based swaps moved the wrong item.
+        const codes = Array.isArray(visibleCodes) ? visibleCodes : [currency.code];
+        const index = codes.indexOf(currency.code);
+
+        const move = (neighborCode) => {
+            const swapped = swapSelectionCodes(userCurrencies, currency.code, neighborCode);
+            if (!swapped) return;
+            userCurrencies = swapped;
+            saveUserCurrencies();
+            updateCurrencyData();
+            renderLists();
+        };
+
         if (index > 0) {
             const upButton = document.createElement('button');
             upButton.innerHTML = '<i class="ph ph-arrow-up"></i>';
             upButton.classList.add('reorder-btn');
             upButton.addEventListener('click', (e) => {
                 e.stopPropagation();
-                [userCurrencies[index], userCurrencies[index - 1]] = [userCurrencies[index - 1], userCurrencies[index]];
-                localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
-                updateCurrencyData();
-                renderLists();
+                move(codes[index - 1]);
             });
             controls.appendChild(upButton);
         }
 
-        if (index < totalSelected - 1) {
+        if (index > -1 && index < codes.length - 1) {
             const downButton = document.createElement('button');
             downButton.innerHTML = '<i class="ph ph-arrow-down"></i>';
             downButton.classList.add('reorder-btn');
             downButton.addEventListener('click', (e) => {
                 e.stopPropagation();
-                [userCurrencies[index], userCurrencies[index + 1]] = [userCurrencies[index + 1], userCurrencies[index]];
-                localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
-                updateCurrencyData();
-                renderLists();
+                move(codes[index + 1]);
             });
             controls.appendChild(downButton);
         }
@@ -293,9 +362,10 @@ function createCurrencyItem(currency, type, index, totalSelected, renderLists) {
         const removeButton = document.createElement('button');
         removeButton.innerHTML = '<i class="ph ph-trash"></i>';
         removeButton.classList.add('reorder-btn', 'remove-btn');
-        removeButton.addEventListener('click', () => {
+        removeButton.addEventListener('click', (e) => {
+            e.stopPropagation();
             userCurrencies = userCurrencies.filter(code => code !== currency.code);
-            localStorage.setItem('userCurrencies', JSON.stringify(userCurrencies));
+            saveUserCurrencies();
             updateCurrencyData();
             renderLists();
         });

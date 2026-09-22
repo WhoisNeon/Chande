@@ -120,7 +120,7 @@ function openCurrencySelector() {
 
     const footer = document.createElement('div');
     footer.classList.add('modal-footer');
-    footer.innerHTML = 'Made with ❤️ by <a href="https://github.com/WhoisNeon" target="_blank">WhoisNeon</a>';
+    footer.innerHTML = 'Made with <i class="ph-duotone ph-heart"></i> by <a href="https://github.com/WhoisNeon" target="_blank">WhoisNeon</a>';
     modalContent.appendChild(footer);
 
     let allCurrencies = [];
@@ -236,7 +236,7 @@ function createCurrencyItem(currency, type, index, totalSelected, renderLists) {
 
     const dragHandle = document.createElement('span');
     dragHandle.classList.add('drag-handle');
-    dragHandle.innerHTML = '<i class="ph ph-grip-vertical"></i>';
+    dragHandle.innerHTML = '<i class="ph ph-dots-six-vertical"></i>';
 
     const flag = document.createElement('img');
     flag.classList.add('flag');

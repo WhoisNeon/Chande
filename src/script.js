@@ -1,75 +1,16 @@
-const fiatGoldApiUrl = 'https://corsproxy.io/?' + encodeURIComponent('https://nerkhban.cyou/api/bon?' + new Date().getTime());
+const fiatGoldApiUrl = 'https://api.x4d1udxvyt.workers.dev/bonbast';
 const cryptoApiUrl = 'https://api.bitpin.org/api/v1/mkt/tickers/';
 
-let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd", "eur", "18ayar", "btc"];
+let userCurrencies = JSON.parse(localStorage.getItem('userCurrencies')) || ["usd", "eur", "18ayar", "usdt", "btc"];
+let currencyMeta = {};
 
-function svgDataUri(bgColor, text) {
-    return 'data:image/svg+xml,' + encodeURIComponent(
-        `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">` +
-        `<circle cx="50" cy="50" r="48" fill="${bgColor}"/>` +
-        `<text x="50" y="65" font-size="40" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold">${text}</text>` +
-        `</svg>`
-    );
+async function loadCurrencyMeta() {
+    const response = await fetch('currency-meta.json');
+    currencyMeta = await response.json();
 }
 
-const currencyMeta = {
-    'usd': { en: 'US Dollar', icon: 'https://flagcdn.com/w80/us.png', type: 'fiat', apiKey: 'USD' },
-    'eur': { en: 'Euro', icon: 'https://flagcdn.com/w80/eu.png', type: 'fiat', apiKey: 'EUR' },
-    'gbp': { en: 'British Pound', icon: 'https://flagcdn.com/w80/gb.png', type: 'fiat', apiKey: 'GBP' },
-    'cad': { en: 'Canadian Dollar', icon: 'https://flagcdn.com/w80/ca.png', type: 'fiat', apiKey: 'CAD' },
-    'aud': { en: 'Australian Dollar', icon: 'https://flagcdn.com/w80/au.png', type: 'fiat', apiKey: 'AUD' },
-    'chf': { en: 'Swiss Franc', icon: 'https://flagcdn.com/w80/ch.png', type: 'fiat', apiKey: 'CHF' },
-    'cny': { en: 'Chinese Yuan', icon: 'https://flagcdn.com/w80/cn.png', type: 'fiat', apiKey: 'CNY' },
-    'jpy': { en: 'Japanese Yen', icon: 'https://flagcdn.com/w80/jp.png', type: 'fiat', apiKey: 'JPY' },
-    'sek': { en: 'Swedish Krona', icon: 'https://flagcdn.com/w80/se.png', type: 'fiat', apiKey: 'SEK' },
-    'nok': { en: 'Norwegian Krone', icon: 'https://flagcdn.com/w80/no.png', type: 'fiat', apiKey: 'NOK' },
-    'dkk': { en: 'Danish Krone', icon: 'https://flagcdn.com/w80/dk.png', type: 'fiat', apiKey: 'DKK' },
-    'sgd': { en: 'Singapore Dollar', icon: 'https://flagcdn.com/w80/sg.png', type: 'fiat', apiKey: 'SGD' },
-    'hkd': { en: 'Hong Kong Dollar', icon: 'https://flagcdn.com/w80/hk.png', type: 'fiat', apiKey: 'HKD' },
-    'inr': { en: 'Indian Rupee', icon: 'https://flagcdn.com/w80/in.png', type: 'fiat', apiKey: 'INR' },
-    'myr': { en: 'Malaysian Ringgit', icon: 'https://flagcdn.com/w80/my.png', type: 'fiat', apiKey: 'MYR' },
-    'thb': { en: 'Thai Baht', icon: 'https://flagcdn.com/w80/th.png', type: 'fiat', apiKey: 'THB' },
-    'rub': { en: 'Russian Ruble', icon: 'https://flagcdn.com/w80/ru.png', type: 'fiat', apiKey: 'RUB' },
-    'try': { en: 'Turkish Lira', icon: 'https://flagcdn.com/w80/tr.png', type: 'fiat', apiKey: 'TRY' },
-    'aed': { en: 'UAE Dirham', icon: 'https://flagcdn.com/w80/ae.png', type: 'fiat', apiKey: 'AED' },
-    'azn': { en: 'Azerbaijani Manat', icon: 'https://flagcdn.com/w80/az.png', type: 'fiat', apiKey: 'AZN' },
-    'kwd': { en: 'Kuwaiti Dinar', icon: 'https://flagcdn.com/w80/kw.png', type: 'fiat', apiKey: 'KWD' },
-    'bhd': { en: 'Bahraini Dinar', icon: 'https://flagcdn.com/w80/bh.png', type: 'fiat', apiKey: 'BHD' },
-    'sar': { en: 'Saudi Riyal', icon: 'https://flagcdn.com/w80/sa.png', type: 'fiat', apiKey: 'SAR' },
-    'qar': { en: 'Qatari Riyal', icon: 'https://flagcdn.com/w80/qa.png', type: 'fiat', apiKey: 'QAR' },
-    'omr': { en: 'Omani Rial', icon: 'https://flagcdn.com/w80/om.png', type: 'fiat', apiKey: 'OMR' },
-    'iqd': { en: 'Iraqi Dinar', icon: 'https://flagcdn.com/w80/iq.png', type: 'fiat', apiKey: 'IQD' },
-    'amd': { en: 'Armenian Dram', icon: 'https://flagcdn.com/w80/am.png', type: 'fiat', apiKey: 'AMD' },
-    'afn': { en: 'Afghan Afghani', icon: 'https://flagcdn.com/w80/af.png', type: 'fiat', apiKey: 'AFN' },
 
-    // Gold (from nerkhban.cyou — sell price)
-    'azadi': { en: 'Azadi Coin', icon: svgDataUri('#FFD700', 'A'), type: 'gold', apiKey: 'azadi' },
-    'emami': { en: 'Emami Coin', icon: svgDataUri('#FFD700', 'E'), type: 'gold', apiKey: 'emami' },
-    'half-azadi': { en: 'Half Azadi', icon: svgDataUri('#FFD700', '½'), type: 'gold', apiKey: 'halfAzadi' },
-    'quarter-azadi': { en: 'Quarter Azadi', icon: svgDataUri('#FFD700', '¼'), type: 'gold', apiKey: 'quarterAzadi' },
-    'gerami': { en: 'Gerami Coin', icon: svgDataUri('#FFD700', 'G'), type: 'gold', apiKey: 'gerami' },
-    '18ayar': { en: '18 Ayar Gold', icon: svgDataUri('#FFD700', '18'), type: 'gold', apiKey: 'gram18' },
-    'mithqal': { en: 'Mithqal', icon: svgDataUri('#FFD700', 'M'), type: 'gold', apiKey: 'mithqal' },
-    'ounce': { en: 'Gold Ounce', icon: svgDataUri('#FFD700', 'Oz'), type: 'gold', apiKey: 'ounce' },
 
-    // Crypto (from bitpin — _IRT pairs, price field)
-    'btc': { en: 'Bitcoin', icon: svgDataUri('#F7931A', 'B'), type: 'crypto', apiSymbol: 'BTC_IRT' },
-    'eth': { en: 'Ethereum', icon: svgDataUri('#627EEA', 'E'), type: 'crypto', apiSymbol: 'ETH_IRT' },
-    'sol': { en: 'Solana', icon: svgDataUri('#9945FF', 'S'), type: 'crypto', apiSymbol: 'SOL_IRT' },
-    'xrp': { en: 'XRP', icon: svgDataUri('#546E7A', 'X'), type: 'crypto', apiSymbol: 'XRP_IRT' },
-    'bnb': { en: 'BNB', icon: svgDataUri('#F3BA2F', 'B'), type: 'crypto', apiSymbol: 'BNB_IRT' },
-    'doge': { en: 'Dogecoin', icon: svgDataUri('#C2A633', 'D'), type: 'crypto', apiSymbol: 'DOGE_IRT' },
-    'ada': { en: 'Cardano', icon: svgDataUri('#0033AD', 'A'), type: 'crypto', apiSymbol: 'ADA_IRT' },
-    'trx': { en: 'TRON', icon: svgDataUri('#FF0013', 'T'), type: 'crypto', apiSymbol: 'TRX_IRT' },
-    'dot': { en: 'Polkadot', icon: svgDataUri('#E6007A', 'D'), type: 'crypto', apiSymbol: 'DOT_IRT' },
-    'shib': { en: 'Shiba Inu', icon: svgDataUri('#FFA409', 'S'), type: 'crypto', apiSymbol: 'SHIB_IRT' },
-    'matic': { en: 'Polygon', icon: svgDataUri('#8247E5', 'P'), type: 'crypto', apiSymbol: 'MATIC_IRT' },
-    'ltc': { en: 'Litecoin', icon: svgDataUri('#345D9D', 'L'), type: 'crypto', apiSymbol: 'LTC_IRT' },
-    'uni': { en: 'Uniswap', icon: svgDataUri('#FF007A', 'U'), type: 'crypto', apiSymbol: 'UNI_IRT' },
-    'atom': { en: 'Cosmos', icon: svgDataUri('#2E3148', 'A'), type: 'crypto', apiSymbol: 'ATOM_IRT' },
-    'avax': { en: 'Avalanche', icon: svgDataUri('#E84142', 'A'), type: 'crypto', apiSymbol: 'AVAX_IRT' },
-    'link': { en: 'Chainlink', icon: svgDataUri('#2A5ADA', 'L'), type: 'crypto', apiSymbol: 'LINK_IRT' },
-};
 
 function createCard(currency) {
     const card = document.createElement('div');
@@ -239,11 +180,13 @@ function openCurrencySelector() {
                     group: 'currencies',
                     animation: 150,
                     sort: false,
+                    handle: '.drag-handle',
                 });
 
                 new Sortable(rightList, {
                     group: 'currencies',
                     animation: 150,
+                    handle: '.drag-handle',
                     onAdd: function (evt) {
                         const code = evt.item.dataset.code;
                         userCurrencies.splice(evt.newIndex, 0, code);
@@ -291,6 +234,10 @@ function createCurrencyItem(currency, type, index, totalSelected, renderLists) {
         });
     }
 
+    const dragHandle = document.createElement('span');
+    dragHandle.classList.add('drag-handle');
+    dragHandle.innerHTML = '<i class="ph ph-grip-vertical"></i>';
+
     const flag = document.createElement('img');
     flag.classList.add('flag');
     flag.src = currency.icon;
@@ -301,6 +248,7 @@ function createCurrencyItem(currency, type, index, totalSelected, renderLists) {
     const currencyInfo = document.createElement('div');
     currencyInfo.classList.add('currency-info-item');
 
+    currencyInfo.appendChild(dragHandle);
     currencyInfo.appendChild(flag);
     currencyInfo.appendChild(label);
     item.appendChild(currencyInfo);
@@ -370,7 +318,9 @@ function updateThemeToggleButton() {
     themeToggleButton.innerHTML = isDarkMode ? '<i class="ph ph-sun"></i>' : '<i class="ph ph-moon"></i>';
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    await loadCurrencyMeta();
+
     document.getElementById('settings-btn').addEventListener('click', openCurrencySelector);
 
     document.getElementById('theme-toggle-btn').addEventListener('click', toggleTheme);
@@ -379,6 +329,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('dark-mode');
     }
     updateThemeToggleButton();
+
+    updateCurrencyData();
 });
 
 
@@ -399,7 +351,7 @@ async function fetchCurrencyData() {
                 const val = fiatGoldData.gold[meta.apiKey];
                 if (val !== undefined) price = typeof val === 'object' ? val.sell : val;
             } else if (meta.type === 'crypto') {
-                const ticker = cryptoData.find(t => t.symbol === meta.apiSymbol);
+                const ticker = cryptoData.find(t => t.symbol === meta.apiSymbol + (meta.apiSymbol === 'USDT' ? '_IRT' : '_USDT'));
                 if (ticker && ticker.price) price = parseFloat(ticker.price);
             }
             if (price === null) return null;
@@ -499,8 +451,6 @@ async function updateCurrencyData() {
     grid.replaceChildren(fragment);
 }
 
-updateCurrencyData();
-
 function openPriceModal(currency, changeText, isPositive) {
     const modal = document.createElement('div');
     modal.classList.add('modal');
@@ -574,7 +524,7 @@ function openPriceModal(currency, changeText, isPositive) {
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('src/service-worker.js')
+        navigator.serviceWorker.register('service-worker.js')
             .then(registration => console.log('Service Worker registered:', registration.scope))
             .catch(error => console.error('Service Worker registration failed:', error));
     });

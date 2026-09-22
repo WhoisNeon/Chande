@@ -32,7 +32,7 @@ body.dark-mode {
 
 @font-face {
     font-family: "SF Pro Rounded";
-    src: url("src/SF-Pro-Rounded-Regular.otf") format("opentype");
+    src: url("SF-Pro-Rounded-Regular.otf") format("opentype");
     font-weight: normal;
 }
 
@@ -366,7 +366,8 @@ h1 {
     .theme-toggle-btn:hover,
     .copy-btn:hover,
     .currency-item:hover,
-    .reorder-btn:hover {
+    .reorder-btn:hover,
+    .drag-handle:hover {
         background-color: var(--hover-background);
     }
 }
@@ -393,6 +394,20 @@ h1 {
     border: 1px solid var(--border-color);
     background-color: var(--background-color);
     color: var(--text-color);
+}
+
+.drag-handle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    color: var(--secondary-text-color);
+    font-size: 16px;
+    padding: 0 5px 0 0;
+}
+
+.drag-handle:active {
+    cursor: grabbing;
 }
 
 .reorder-btn {

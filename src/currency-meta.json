@@ -1,0 +1,4172 @@
+{
+  "usd": {
+    "en": "US Dollar",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/us.svg",
+    "type": "fiat",
+    "apiKey": "USD"
+  },
+  "eur": {
+    "en": "Euro",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/european_union.svg",
+    "type": "fiat",
+    "apiKey": "EUR"
+  },
+  "gbp": {
+    "en": "British Pound",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/gb.svg",
+    "type": "fiat",
+    "apiKey": "GBP"
+  },
+  "cad": {
+    "en": "Canadian Dollar",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/ca.svg",
+    "type": "fiat",
+    "apiKey": "CAD"
+  },
+  "aud": {
+    "en": "Australian Dollar",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/au.svg",
+    "type": "fiat",
+    "apiKey": "AUD"
+  },
+  "chf": {
+    "en": "Swiss Franc",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/ch.svg",
+    "type": "fiat",
+    "apiKey": "CHF"
+  },
+  "cny": {
+    "en": "Chinese Yuan",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/cn.svg",
+    "type": "fiat",
+    "apiKey": "CNY"
+  },
+  "jpy": {
+    "en": "Japanese Yen",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/jp.svg",
+    "type": "fiat",
+    "apiKey": "JPY"
+  },
+  "sek": {
+    "en": "Swedish Krona",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/se.svg",
+    "type": "fiat",
+    "apiKey": "SEK"
+  },
+  "nok": {
+    "en": "Norwegian Krone",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/no.svg",
+    "type": "fiat",
+    "apiKey": "NOK"
+  },
+  "dkk": {
+    "en": "Danish Krone",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/dk.svg",
+    "type": "fiat",
+    "apiKey": "DKK"
+  },
+  "sgd": {
+    "en": "Singapore Dollar",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/sg.svg",
+    "type": "fiat",
+    "apiKey": "SGD"
+  },
+  "hkd": {
+    "en": "Hong Kong Dollar",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/hk.svg",
+    "type": "fiat",
+    "apiKey": "HKD"
+  },
+  "inr": {
+    "en": "Indian Rupee",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/in.svg",
+    "type": "fiat",
+    "apiKey": "INR"
+  },
+  "myr": {
+    "en": "Malaysian Ringgit",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/my.svg",
+    "type": "fiat",
+    "apiKey": "MYR"
+  },
+  "thb": {
+    "en": "Thai Baht",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/th.svg",
+    "type": "fiat",
+    "apiKey": "THB"
+  },
+  "rub": {
+    "en": "Russian Ruble",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/ru.svg",
+    "type": "fiat",
+    "apiKey": "RUB"
+  },
+  "try": {
+    "en": "Turkish Lira",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/tr.svg",
+    "type": "fiat",
+    "apiKey": "TRY"
+  },
+  "aed": {
+    "en": "UAE Dirham",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/ae.svg",
+    "type": "fiat",
+    "apiKey": "AED"
+  },
+  "azn": {
+    "en": "Azerbaijani Manat",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/az.svg",
+    "type": "fiat",
+    "apiKey": "AZN"
+  },
+  "kwd": {
+    "en": "Kuwaiti Dinar",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/kw.svg",
+    "type": "fiat",
+    "apiKey": "KWD"
+  },
+  "bhd": {
+    "en": "Bahraini Dinar",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/bh.svg",
+    "type": "fiat",
+    "apiKey": "BHD"
+  },
+  "sar": {
+    "en": "Saudi Riyal",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/sa.svg",
+    "type": "fiat",
+    "apiKey": "SAR"
+  },
+  "qar": {
+    "en": "Qatari Riyal",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/qa.svg",
+    "type": "fiat",
+    "apiKey": "QAR"
+  },
+  "omr": {
+    "en": "Omani Rial",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/om.svg",
+    "type": "fiat",
+    "apiKey": "OMR"
+  },
+  "iqd": {
+    "en": "Iraqi Dinar",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/iq.svg",
+    "type": "fiat",
+    "apiKey": "IQD"
+  },
+  "amd": {
+    "en": "Armenian Dram",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/am.svg",
+    "type": "fiat",
+    "apiKey": "AMD"
+  },
+  "afn": {
+    "en": "Afghan Afghani",
+    "icon": "https://raw.githubusercontent.com/HatScripts/circle-flags/refs/heads/gh-pages/flags/af.svg",
+    "type": "fiat",
+    "apiKey": "AFN"
+  },
+  "azadi": {
+    "en": "Azadi Coin",
+    "icon": "https://platform.tgju.org/files/images/gold-1697963734.png",
+    "type": "gold",
+    "apiKey": "azadi"
+  },
+  "emami": {
+    "en": "Emami Coin",
+    "icon": "https://platform.tgju.org/files/images/gold-1697963734.png",
+    "type": "gold",
+    "apiKey": "emami"
+  },
+  "half-azadi": {
+    "en": "Half Azadi",
+    "icon": "https://platform.tgju.org/files/images/gold-1697963734.png",
+    "type": "gold",
+    "apiKey": "halfAzadi"
+  },
+  "quarter-azadi": {
+    "en": "Quarter Azadi",
+    "icon": "https://platform.tgju.org/files/images/gold-1697963734.png",
+    "type": "gold",
+    "apiKey": "quarterAzadi"
+  },
+  "gerami": {
+    "en": "Gerami Coin",
+    "icon": "https://platform.tgju.org/files/images/gold-1697963734.png",
+    "type": "gold",
+    "apiKey": "gerami"
+  },
+  "18ayar": {
+    "en": "18 Ayar Gold",
+    "icon": "https://platform.tgju.org/files/images/gold-bar-1-1622253841.png",
+    "type": "gold",
+    "apiKey": "gram18"
+  },
+  "mithqal": {
+    "en": "Mithqal",
+    "icon": "https://platform.tgju.org/files/images/gold-bar-1622253729.png",
+    "type": "gold",
+    "apiKey": "mithqal"
+  },
+  "ounce": {
+    "en": "Gold Ounce",
+    "icon": "https://platform.tgju.org/files/images/pla0440tin-1666078154-1666079069.png",
+    "type": "gold",
+    "apiKey": "ounce"
+  },
+  "usdt": {
+    "en": "USDT",
+    "icon": "https://alanchand.com/assets/img/crypto/USDT.svg",
+    "type": "crypto",
+    "apiSymbol": "USDT"
+  },
+  "btc": {
+    "en": "Bitcoin",
+    "icon": "https://alanchand.com/assets/img/crypto/BTC.svg",
+    "type": "crypto",
+    "apiSymbol": "BTC"
+  },
+  "eth": {
+    "en": "Ethereum",
+    "icon": "https://alanchand.com/assets/img/crypto/ETH.svg",
+    "type": "crypto",
+    "apiSymbol": "ETH"
+  },
+  "xrp": {
+    "en": "Ripple",
+    "icon": "https://alanchand.com/assets/img/crypto/XRP.svg",
+    "type": "crypto",
+    "apiSymbol": "XRP"
+  },
+  "bnb": {
+    "en": "Binance Coin",
+    "icon": "https://alanchand.com/assets/img/crypto/BNB.svg",
+    "type": "crypto",
+    "apiSymbol": "BNB"
+  },
+  "shib": {
+    "en": "Shiba Inu",
+    "icon": "https://alanchand.com/assets/img/crypto/SHIB.svg",
+    "type": "crypto",
+    "apiSymbol": "SHIB"
+  },
+  "ada": {
+    "en": "Cardano",
+    "icon": "https://alanchand.com/assets/img/crypto/ADA.svg",
+    "type": "crypto",
+    "apiSymbol": "ADA"
+  },
+  "doge": {
+    "en": "Dogecoin",
+    "icon": "https://alanchand.com/assets/img/crypto/DOGE.svg",
+    "type": "crypto",
+    "apiSymbol": "DOGE"
+  },
+  "ton": {
+    "en": "Toncoin",
+    "icon": "https://alanchand.com/assets/img/crypto/TON.svg",
+    "type": "crypto",
+    "apiSymbol": "TON"
+  },
+  "not": {
+    "en": "Notcoin",
+    "icon": "https://alanchand.com/assets/img/crypto/NOT.svg",
+    "type": "crypto",
+    "apiSymbol": "NOT"
+  },
+  "sol": {
+    "en": "Solana",
+    "icon": "https://alanchand.com/assets/img/crypto/SOL.svg",
+    "type": "crypto",
+    "apiSymbol": "SOL"
+  },
+  "trx": {
+    "en": "TRON",
+    "icon": "https://alanchand.com/assets/img/crypto/TRX.svg",
+    "type": "crypto",
+    "apiSymbol": "TRX"
+  },
+  "cake": {
+    "en": "PancakeSwap",
+    "icon": "https://alanchand.com/assets/img/crypto/CAKE.svg",
+    "type": "crypto",
+    "apiSymbol": "CAKE"
+  },
+  "avax": {
+    "en": "Avalanche",
+    "icon": "https://alanchand.com/assets/img/crypto/AVAX.svg",
+    "type": "crypto",
+    "apiSymbol": "AVAX"
+  },
+  "dot": {
+    "en": "Polkadot",
+    "icon": "https://alanchand.com/assets/img/crypto/DOT.svg",
+    "type": "crypto",
+    "apiSymbol": "DOT"
+  },
+  "link": {
+    "en": "Chainlink",
+    "icon": "https://alanchand.com/assets/img/crypto/LINK.svg",
+    "type": "crypto",
+    "apiSymbol": "LINK"
+  },
+  "ltc": {
+    "en": "Litecoin",
+    "icon": "https://alanchand.com/assets/img/crypto/LTC.svg",
+    "type": "crypto",
+    "apiSymbol": "LTC"
+  },
+  "pepe": {
+    "en": "Pepe",
+    "icon": "https://alanchand.com/assets/img/crypto/PEPE.svg",
+    "type": "crypto",
+    "apiSymbol": "PEPE"
+  },
+  "uni": {
+    "en": "Uniswap",
+    "icon": "https://alanchand.com/assets/img/crypto/UNI.svg",
+    "type": "crypto",
+    "apiSymbol": "UNI"
+  },
+  "xlm": {
+    "en": "Stellar",
+    "icon": "https://alanchand.com/assets/img/crypto/XLM.svg",
+    "type": "crypto",
+    "apiSymbol": "XLM"
+  },
+  "fil": {
+    "en": "Filecoin",
+    "icon": "https://alanchand.com/assets/img/crypto/FIL.svg",
+    "type": "crypto",
+    "apiSymbol": "FIL"
+  },
+  "near": {
+    "en": "NEAR",
+    "icon": "https://alanchand.com/assets/img/crypto/NEAR.svg",
+    "type": "crypto",
+    "apiSymbol": "NEAR"
+  },
+  "eos": {
+    "en": "EOS",
+    "icon": "https://alanchand.com/assets/img/crypto/EOS.svg",
+    "type": "crypto",
+    "apiSymbol": "EOS"
+  },
+  "aave": {
+    "en": "Aave",
+    "icon": "https://alanchand.com/assets/img/crypto/AAVE.svg",
+    "type": "crypto",
+    "apiSymbol": "AAVE"
+  },
+  "grt": {
+    "en": "The Graph",
+    "icon": "https://alanchand.com/assets/img/crypto/GRt.svg",
+    "type": "crypto",
+    "apiSymbol": "GRt"
+  },
+  "xtz": {
+    "en": "Tezos",
+    "icon": "https://alanchand.com/assets/img/crypto/XTZ.svg",
+    "type": "crypto",
+    "apiSymbol": "XTZ"
+  },
+  "flow": {
+    "en": "Flow",
+    "icon": "https://alanchand.com/assets/img/crypto/FLOW.svg",
+    "type": "crypto",
+    "apiSymbol": "FLOW"
+  },
+  "sand": {
+    "en": "The Sandbox",
+    "icon": "https://alanchand.com/assets/img/crypto/SAND.svg",
+    "type": "crypto",
+    "apiSymbol": "SAND"
+  },
+  "mana": {
+    "en": "Decentraland",
+    "icon": "https://alanchand.com/assets/img/crypto/MANA.svg",
+    "type": "crypto",
+    "apiSymbol": "MANA"
+  },
+  "axs": {
+    "en": "Axie Infinity",
+    "icon": "https://alanchand.com/assets/img/crypto/AXS.svg",
+    "type": "crypto",
+    "apiSymbol": "AXS"
+  },
+  "chz": {
+    "en": "Chiliz",
+    "icon": "https://alanchand.com/assets/img/crypto/CHZ.svg",
+    "type": "crypto",
+    "apiSymbol": "CHZ"
+  },
+  "enj": {
+    "en": "Enjin Coin",
+    "icon": "https://alanchand.com/assets/img/crypto/ENJ.svg",
+    "type": "crypto",
+    "apiSymbol": "ENJ"
+  },
+  "zec": {
+    "en": "Zcash",
+    "icon": "https://alanchand.com/assets/img/crypto/ZEC.svg",
+    "type": "crypto",
+    "apiSymbol": "ZEC"
+  },
+  "gala": {
+    "en": "Gala Games",
+    "icon": "https://alanchand.com/assets/img/crypto/GALA.svg",
+    "type": "crypto",
+    "apiSymbol": "GALA"
+  },
+  "lrc": {
+    "en": "Loopring",
+    "icon": "https://alanchand.com/assets/img/crypto/LRC.svg",
+    "type": "crypto",
+    "apiSymbol": "LRC"
+  },
+  "bat": {
+    "en": "Basic Attention Token",
+    "icon": "https://alanchand.com/assets/img/crypto/BAT.svg",
+    "type": "crypto",
+    "apiSymbol": "BAT"
+  },
+  "one": {
+    "en": "Harmony",
+    "icon": "https://alanchand.com/assets/img/crypto/ONE.svg",
+    "type": "crypto",
+    "apiSymbol": "ONE"
+  },
+  "zen": {
+    "en": "Horizen",
+    "icon": "https://alanchand.com/assets/img/crypto/ZEN.svg",
+    "type": "crypto",
+    "apiSymbol": "ZEN"
+  },
+  "cvc": {
+    "en": "Civic",
+    "icon": "https://alanchand.com/assets/img/crypto/CVC.svg",
+    "type": "crypto",
+    "apiSymbol": "CVC"
+  },
+  "storj": {
+    "en": "Storj",
+    "icon": "https://alanchand.com/assets/img/crypto/STORJ.svg",
+    "type": "crypto",
+    "apiSymbol": "STORJ"
+  },
+  "paxg": {
+    "en": "PAX Gold",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/paxg.svg",
+    "type": "crypto",
+    "apiSymbol": "PAXG"
+  },
+  "slvon": {
+    "en": "SLVON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771999745.svg",
+    "type": "crypto",
+    "apiSymbol": "SLVON"
+  },
+  "copxon": {
+    "en": "COPXON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771999639.svg",
+    "type": "crypto",
+    "apiSymbol": "COPXON"
+  },
+  "usoon": {
+    "en": "USOON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771999775.svg",
+    "type": "crypto",
+    "apiSymbol": "USOON"
+  },
+  "ungon": {
+    "en": "UNGON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1782675597.png",
+    "type": "crypto",
+    "apiSymbol": "UNGON"
+  },
+  "usdc": {
+    "en": "USD Coin",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/usdc.svg",
+    "type": "crypto",
+    "apiSymbol": "USDC"
+  },
+  "usds": {
+    "en": "USDS",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/usds.svg",
+    "type": "crypto",
+    "apiSymbol": "USDS"
+  },
+  "bch": {
+    "en": "Bitcoin Cash",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/bch.svg",
+    "type": "crypto",
+    "apiSymbol": "BCH"
+  },
+  "wbtc": {
+    "en": "Wrapped Bitcoin",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/wbtc.svg",
+    "type": "crypto",
+    "apiSymbol": "WBTC"
+  },
+  "xmr": {
+    "en": "Monero",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/xmr.svg",
+    "type": "crypto",
+    "apiSymbol": "XMR"
+  },
+  "sui": {
+    "en": "Sui",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/sui.svg",
+    "type": "crypto",
+    "apiSymbol": "SUI"
+  },
+  "lsk": {
+    "en": "Lisk",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/lsk.svg",
+    "type": "crypto",
+    "apiSymbol": "LSK"
+  },
+  "hype": {
+    "en": "Hyperliquid",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/hype.svg",
+    "type": "crypto",
+    "apiSymbol": "HYPE"
+  },
+  "usde": {
+    "en": "USDe",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/usde.svg",
+    "type": "crypto",
+    "apiSymbol": "USDE"
+  },
+  "adi": {
+    "en": "ADI",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/adi.svg",
+    "type": "crypto",
+    "apiSymbol": "ADI"
+  },
+  "hbar": {
+    "en": "Hedera",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/hbar.svg",
+    "type": "crypto",
+    "apiSymbol": "HBAR"
+  },
+  "nil": {
+    "en": "NIL",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1767789026.svg",
+    "type": "crypto",
+    "apiSymbol": "NIL"
+  },
+  "pippin": {
+    "en": "Pippin",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1767789096.svg",
+    "type": "crypto",
+    "apiSymbol": "PIPPIN"
+  },
+  "cc": {
+    "en": "CC",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/cc.svg",
+    "type": "crypto",
+    "apiSymbol": "CC"
+  },
+  "snt": {
+    "en": "Status",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/snt.svg",
+    "type": "crypto",
+    "apiSymbol": "SNT"
+  },
+  "gram": {
+    "en": "GRAM",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1781342173.svg",
+    "type": "crypto",
+    "apiSymbol": "GRAM"
+  },
+  "wlfi": {
+    "en": "WLFI",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/wlfi.svg",
+    "type": "crypto",
+    "apiSymbol": "WLFI"
+  },
+  "dai": {
+    "en": "Dai",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/dai.svg",
+    "type": "crypto",
+    "apiSymbol": "DAI"
+  },
+  "cro": {
+    "en": "Cronos",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/cro.svg",
+    "type": "crypto",
+    "apiSymbol": "CRO"
+  },
+  "xagx": {
+    "en": "XAGX",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771999745.svg",
+    "type": "crypto",
+    "apiSymbol": "XAGX"
+  },
+  "mnt": {
+    "en": "Mantle",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/mnt.svg",
+    "type": "crypto",
+    "apiSymbol": "MNT"
+  },
+  "usd1": {
+    "en": "USD1",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/usd1.svg",
+    "type": "crypto",
+    "apiSymbol": "USD1"
+  },
+  "tao": {
+    "en": "Bittensor",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/tao.svg",
+    "type": "crypto",
+    "apiSymbol": "TAO"
+  },
+  "rave": {
+    "en": "RAVE",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/rave.svg",
+    "type": "crypto",
+    "apiSymbol": "RAVE"
+  },
+  "bgb": {
+    "en": "Bitget Token",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/bgb.svg",
+    "type": "crypto",
+    "apiSymbol": "BGB"
+  },
+  "okb": {
+    "en": "OKB",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/okb.svg",
+    "type": "crypto",
+    "apiSymbol": "OKB"
+  },
+  "xaut": {
+    "en": "Tether Gold",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/xaut.svg",
+    "type": "crypto",
+    "apiSymbol": "XAUT"
+  },
+  "etc": {
+    "en": "Ethereum Classic",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/etc.svg",
+    "type": "crypto",
+    "apiSymbol": "ETC"
+  },
+  "gson": {
+    "en": "GSON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "GSON"
+  },
+  "pallon": {
+    "en": "PALLON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771999707.svg",
+    "type": "crypto",
+    "apiSymbol": "PALLON"
+  },
+  "gldon": {
+    "en": "GLDON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771999682.svg",
+    "type": "crypto",
+    "apiSymbol": "GLDON"
+  },
+  "pepon": {
+    "en": "PEPON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771999725.svg",
+    "type": "crypto",
+    "apiSymbol": "PEPON"
+  },
+  "jvmon": {
+    "en": "JPMON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771834521.svg",
+    "type": "crypto",
+    "apiSymbol": "JPMON"
+  },
+  "nkeon": {
+    "en": "NKEON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771834587.svg",
+    "type": "crypto",
+    "apiSymbol": "NKEON"
+  },
+  "mcdon": {
+    "en": "MCDON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771838923.svg",
+    "type": "crypto",
+    "apiSymbol": "MCDON"
+  },
+  "geon": {
+    "en": "GEON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771838997.svg",
+    "type": "crypto",
+    "apiSymbol": "GEON"
+  },
+  "aaplon": {
+    "en": "AAPLON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771839067.svg",
+    "type": "crypto",
+    "apiSymbol": "AAPLON"
+  },
+  "fon": {
+    "en": "FON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771840663.svg",
+    "type": "crypto",
+    "apiSymbol": "FON"
+  },
+  "ena": {
+    "en": "Ethena",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/ena.svg",
+    "type": "crypto",
+    "apiSymbol": "ENA"
+  },
+  "icp": {
+    "en": "Internet Computer",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/icp.svg",
+    "type": "crypto",
+    "apiSymbol": "ICP"
+  },
+  "aster": {
+    "en": "Aster",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/aster.svg",
+    "type": "crypto",
+    "apiSymbol": "ASTER"
+  },
+  "wld": {
+    "en": "Worldcoin",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/wld.svg",
+    "type": "crypto",
+    "apiSymbol": "WLD"
+  },
+  "beat": {
+    "en": "BEAT",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1781086516.svg",
+    "type": "crypto",
+    "apiSymbol": "BEAT"
+  },
+  "kcs": {
+    "en": "KuCoin Token",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/kcs.svg",
+    "type": "crypto",
+    "apiSymbol": "KCS"
+  },
+  "apt": {
+    "en": "Aptos",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/apt.svg",
+    "type": "crypto",
+    "apiSymbol": "APT"
+  },
+  "sky": {
+    "en": "Sky",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/sky.svg",
+    "type": "crypto",
+    "apiSymbol": "SKY"
+  },
+  "pump": {
+    "en": "Pump.fun",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787423114.svg",
+    "type": "crypto",
+    "apiSymbol": "PUMP"
+  },
+  "ondo": {
+    "en": "Ondo",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/ondo.svg",
+    "type": "crypto",
+    "apiSymbol": "ONDO"
+  },
+  "kas": {
+    "en": "Kaspa",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/kas.svg",
+    "type": "crypto",
+    "apiSymbol": "KAS"
+  },
+  "pol": {
+    "en": "Polygon",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1728209698.svg",
+    "type": "crypto",
+    "apiSymbol": "POL"
+  },
+  "night": {
+    "en": "NIGHT",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/night.svg",
+    "type": "crypto",
+    "apiSymbol": "NIGHT"
+  },
+  "arb": {
+    "en": "Arbitrum",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/arb.svg",
+    "type": "crypto",
+    "apiSymbol": "ARB"
+  },
+  "algo": {
+    "en": "Algorand",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/algo.svg",
+    "type": "crypto",
+    "apiSymbol": "ALGO"
+  },
+  "render": {
+    "en": "Render",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787420762.svg",
+    "type": "crypto",
+    "apiSymbol": "RENDER"
+  },
+  "atom": {
+    "en": "Cosmos",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/atom.svg",
+    "type": "crypto",
+    "apiSymbol": "ATOM"
+  },
+  "qnt": {
+    "en": "Quant",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/qnt.svg",
+    "type": "crypto",
+    "apiSymbol": "QNT"
+  },
+  "vet": {
+    "en": "VeChain",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/vet.svg",
+    "type": "crypto",
+    "apiSymbol": "VET"
+  },
+  "bonk": {
+    "en": "Bonk",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1703047930.png",
+    "type": "crypto",
+    "apiSymbol": "BONK"
+  },
+  "flr": {
+    "en": "Flare",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/flr.svg",
+    "type": "crypto",
+    "apiSymbol": "FLR"
+  },
+  "xdc": {
+    "en": "XDC Network",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/xdc.svg",
+    "type": "crypto",
+    "apiSymbol": "XDC"
+  },
+  "nexo": {
+    "en": "NEXO",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/nexo.svg",
+    "type": "crypto",
+    "apiSymbol": "NEXO"
+  },
+  "siren": {
+    "en": "SIREN",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778409537.png",
+    "type": "crypto",
+    "apiSymbol": "SIREN"
+  },
+  "sei": {
+    "en": "Sei",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/sei.svg",
+    "type": "crypto",
+    "apiSymbol": "SEI"
+  },
+  "stable": {
+    "en": "STABLE",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/stable.svg",
+    "type": "crypto",
+    "apiSymbol": "STABLE"
+  },
+  "pengu": {
+    "en": "Pudgy Penguins",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787420741.svg",
+    "type": "crypto",
+    "apiSymbol": "PENGU"
+  },
+  "virtual": {
+    "en": "Virtuals Protocol",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1737279133.svg",
+    "type": "crypto",
+    "apiSymbol": "VIRTUAL"
+  },
+  "jup": {
+    "en": "Jupiter",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/jup.svg",
+    "type": "crypto",
+    "apiSymbol": "JUP"
+  },
+  "bdx": {
+    "en": "BDX",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/bdx.svg",
+    "type": "crypto",
+    "apiSymbol": "BDX"
+  },
+  "fet": {
+    "en": "Fetch.ai",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/fet.svg",
+    "type": "crypto",
+    "apiSymbol": "FET"
+  },
+  "morpho": {
+    "en": "Morpho",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/morpho.svg",
+    "type": "crypto",
+    "apiSymbol": "MORPHO"
+  },
+  "op": {
+    "en": "Optimism",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/op.svg",
+    "type": "crypto",
+    "apiSymbol": "OP"
+  },
+  "crv": {
+    "en": "Curve DAO",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/crv.svg",
+    "type": "crypto",
+    "apiSymbol": "CRV"
+  },
+  "spx": {
+    "en": "SPX",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1749368811.png",
+    "type": "crypto",
+    "apiSymbol": "SPX"
+  },
+  "dash": {
+    "en": "Dash",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/dash.svg",
+    "type": "crypto",
+    "apiSymbol": "DASH"
+  },
+  "floki": {
+    "en": "Floki",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/floki.svg",
+    "type": "crypto",
+    "apiSymbol": "FLOKI"
+  },
+  "ldo": {
+    "en": "Lido DAO",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/ldo.svg",
+    "type": "crypto",
+    "apiSymbol": "LDO"
+  },
+  "aero": {
+    "en": "Aerodrome",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759654572.png",
+    "type": "crypto",
+    "apiSymbol": "AERO"
+  },
+  "inj": {
+    "en": "Injective",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/inj.svg",
+    "type": "crypto",
+    "apiSymbol": "INJ"
+  },
+  "skyai": {
+    "en": "SKYAI",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778409774.png",
+    "type": "crypto",
+    "apiSymbol": "SKYAI"
+  },
+  "ethfi": {
+    "en": "Ether.fi",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1723219017.svg",
+    "type": "crypto",
+    "apiSymbol": "ETHFI"
+  },
+  "fdusd": {
+    "en": "First Digital USD",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/fdusd.svg",
+    "type": "crypto",
+    "apiSymbol": "FDUSD"
+  },
+  "tia": {
+    "en": "Celestia",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/tia.svg",
+    "type": "crypto",
+    "apiSymbol": "TIA"
+  },
+  "strk": {
+    "en": "Starknet",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/strk.svg",
+    "type": "crypto",
+    "apiSymbol": "STRK"
+  },
+  "iota": {
+    "en": "IOTA",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/iota.svg",
+    "type": "crypto",
+    "apiSymbol": "IOTA"
+  },
+  "bsv": {
+    "en": "Bitcoin SV",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/bsv.svg",
+    "type": "crypto",
+    "apiSymbol": "BSV"
+  },
+  "xcn": {
+    "en": "XCN",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/xcn.svg",
+    "type": "crypto",
+    "apiSymbol": "XCN"
+  },
+  "vvv": {
+    "en": "VVV",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/vvv.svg",
+    "type": "crypto",
+    "apiSymbol": "VVV"
+  },
+  "syrup": {
+    "en": "Syrup",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1751988364.svg",
+    "type": "crypto",
+    "apiSymbol": "SYRUP"
+  },
+  "fartcoin": {
+    "en": "Fartcoin",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1739620409.png",
+    "type": "crypto",
+    "apiSymbol": "FARTCOIN"
+  },
+  "2z": {
+    "en": "2Z",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759740444.svg",
+    "type": "crypto",
+    "apiSymbol": "2Z"
+  },
+  "jasmy": {
+    "en": "JasmyCoin",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1691848358.svg",
+    "type": "crypto",
+    "apiSymbol": "JASMY"
+  },
+  "cfx": {
+    "en": "Conflux",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/cfx.svg",
+    "type": "crypto",
+    "apiSymbol": "CFX"
+  },
+  "ens": {
+    "en": "Ethereum Name Service",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/ens.svg",
+    "type": "crypto",
+    "apiSymbol": "ENS"
+  },
+  "wif": {
+    "en": "dogwifhat",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1708846419.png",
+    "type": "crypto",
+    "apiSymbol": "WIF"
+  },
+  "pyth": {
+    "en": "Pyth Network",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/pyth.svg",
+    "type": "crypto",
+    "apiSymbol": "PYTH"
+  },
+  "jst": {
+    "en": "JUST",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/jst.svg",
+    "type": "crypto",
+    "apiSymbol": "JST"
+  },
+  "xpl": {
+    "en": "XPL",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/xpl.svg",
+    "type": "crypto",
+    "apiSymbol": "XPL"
+  },
+  "edge": {
+    "en": "EDGE",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1776081909.svg",
+    "type": "crypto",
+    "apiSymbol": "EDGE"
+  },
+  "kaia": {
+    "en": "Kaia",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766508048.svg",
+    "type": "crypto",
+    "apiSymbol": "KAIA"
+  },
+  "twt": {
+    "en": "Trust Wallet Token",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/twt.svg",
+    "type": "crypto",
+    "apiSymbol": "TWT"
+  },
+  "pendle": {
+    "en": "Pendle",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/pendle.svg",
+    "type": "crypto",
+    "apiSymbol": "PENDLE"
+  },
+  "lighter": {
+    "en": "LIGHTER",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1779708993.svg",
+    "type": "crypto",
+    "apiSymbol": "LIGHTER"
+  },
+  "sun": {
+    "en": "Sun Token",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/sun.svg",
+    "type": "crypto",
+    "apiSymbol": "SUN"
+  },
+  "tel": {
+    "en": "Telcoin",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/tel.svg",
+    "type": "crypto",
+    "apiSymbol": "TEL"
+  },
+  "s": {
+    "en": "Sonic",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/s.svg",
+    "type": "crypto",
+    "apiSymbol": "S"
+  },
+  "nft": {
+    "en": "NFT",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/nft.svg",
+    "type": "crypto",
+    "apiSymbol": "NFT"
+  },
+  "zk": {
+    "en": "zkSync",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/zk.svg",
+    "type": "crypto",
+    "apiSymbol": "ZK"
+  },
+  "ray": {
+    "en": "Raydium",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/ray.svg",
+    "type": "crypto",
+    "apiSymbol": "RAY"
+  },
+  "theta": {
+    "en": "Theta Network",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/theta.svg",
+    "type": "crypto",
+    "apiSymbol": "THETA"
+  },
+  "vsn": {
+    "en": "VSN",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1762702721.svg",
+    "type": "crypto",
+    "apiSymbol": "VSN"
+  },
+  "busd": {
+    "en": "Binance USD",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/busd.svg",
+    "type": "crypto",
+    "apiSymbol": "BUSD"
+  },
+  "cmc20": {
+    "en": "CMC20",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1768808940.svg",
+    "type": "crypto",
+    "apiSymbol": "CMC20"
+  },
+  "mon": {
+    "en": "MON",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/mon.svg",
+    "type": "crypto",
+    "apiSymbol": "MON"
+  },
+  "a": {
+    "en": "A",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1748500901.svg",
+    "type": "crypto",
+    "apiSymbol": "A"
+  },
+  "hnt": {
+    "en": "Helium",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/hnt.svg",
+    "type": "crypto",
+    "apiSymbol": "HNT"
+  },
+  "sent": {
+    "en": "SENT",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1769841202.svg",
+    "type": "crypto",
+    "apiSymbol": "SENT"
+  },
+  "zbcn": {
+    "en": "ZBCN",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1749369452.png",
+    "type": "crypto",
+    "apiSymbol": "ZBCN"
+  },
+  "h": {
+    "en": "H",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/h.svg",
+    "type": "crypto",
+    "apiSymbol": "H"
+  },
+  "zro": {
+    "en": "LayerZero",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/zro.svg",
+    "type": "crypto",
+    "apiSymbol": "ZRO"
+  },
+  "merl": {
+    "en": "Merlin Chain",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766595090.svg",
+    "type": "crypto",
+    "apiSymbol": "MERL"
+  },
+  "ar": {
+    "en": "Arweave",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/ar.svg",
+    "type": "crypto",
+    "apiSymbol": "AR"
+  },
+  "comp": {
+    "en": "Compound",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/comp.svg",
+    "type": "crypto",
+    "apiSymbol": "COMP"
+  },
+  "glm": {
+    "en": "Golem",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1676790975.png",
+    "type": "crypto",
+    "apiSymbol": "GLM"
+  },
+  "lunc": {
+    "en": "Terra Classic",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1632930718.svg",
+    "type": "crypto",
+    "apiSymbol": "LUNC"
+  },
+  "nex": {
+    "en": "NEX",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/nex.svg",
+    "type": "crypto",
+    "apiSymbol": "NEX"
+  },
+  "xec": {
+    "en": "eCash",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/xec.svg",
+    "type": "crypto",
+    "apiSymbol": "XEC"
+  },
+  "imx": {
+    "en": "Immutable",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/imx.svg",
+    "type": "crypto",
+    "apiSymbol": "IMX"
+  },
+  "eigen": {
+    "en": "EigenLayer",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1727850984.svg",
+    "type": "crypto",
+    "apiSymbol": "EIGEN"
+  },
+  "genius": {
+    "en": "GENIUS",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1779704424.svg",
+    "type": "crypto",
+    "apiSymbol": "GENIUS"
+  },
+  "fluid": {
+    "en": "Fluid",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766595272.svg",
+    "type": "crypto",
+    "apiSymbol": "FLUID"
+  },
+  "wal": {
+    "en": "Walrus",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1749369147.svg",
+    "type": "crypto",
+    "apiSymbol": "WAL"
+  },
+  "1inch": {
+    "en": "1inch",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/1inch.svg",
+    "type": "crypto",
+    "apiSymbol": "1INCH"
+  },
+  "ff": {
+    "en": "FF",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759243494.svg",
+    "type": "crypto",
+    "apiSymbol": "FF"
+  },
+  "kmno": {
+    "en": "Kamino",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759243426.svg",
+    "type": "crypto",
+    "apiSymbol": "KMNO"
+  },
+  "rune": {
+    "en": "THORChain",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/rune.svg",
+    "type": "crypto",
+    "apiSymbol": "RUNE"
+  },
+  "cheems": {
+    "en": "Cheems",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759922735.png",
+    "type": "crypto",
+    "apiSymbol": "CHEEMS"
+  },
+  "0g": {
+    "en": "0G",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766507741.svg",
+    "type": "crypto",
+    "apiSymbol": "0G"
+  },
+  "jto": {
+    "en": "Jito",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/jto.svg",
+    "type": "crypto",
+    "apiSymbol": "JTO"
+  },
+  "b": {
+    "en": "B",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1749369752.png",
+    "type": "crypto",
+    "apiSymbol": "B"
+  },
+  "ape": {
+    "en": "ApeCoin",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/ape.svg",
+    "type": "crypto",
+    "apiSymbol": "APE"
+  },
+  "w": {
+    "en": "Wormhole",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/w.svg",
+    "type": "crypto",
+    "apiSymbol": "W"
+  },
+  "zora": {
+    "en": "Zora",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1757846065.svg",
+    "type": "crypto",
+    "apiSymbol": "ZORA"
+  },
+  "cvx": {
+    "en": "Convex Finance",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/cvx.svg",
+    "type": "crypto",
+    "apiSymbol": "CVX"
+  },
+  "brett": {
+    "en": "Brett",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1735763663.png",
+    "type": "crypto",
+    "apiSymbol": "BRETT"
+  },
+  "egld": {
+    "en": "MultiversX",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/egld.svg",
+    "type": "crypto",
+    "apiSymbol": "EGLD"
+  },
+  "bard": {
+    "en": "BARD",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1758556267.svg",
+    "type": "crypto",
+    "apiSymbol": "BARD"
+  },
+  "ath": {
+    "en": "Aethir",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1737281774.svg",
+    "type": "crypto",
+    "apiSymbol": "ATH"
+  },
+  "amp": {
+    "en": "Amp",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/amp.svg",
+    "type": "crypto",
+    "apiSymbol": "AMP"
+  },
+  "rif": {
+    "en": "RIF Token",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/rif.svg",
+    "type": "crypto",
+    "apiSymbol": "RIF"
+  },
+  "rsr": {
+    "en": "Reserve Rights",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/rsr.svg",
+    "type": "crypto",
+    "apiSymbol": "RSR"
+  },
+  "kite": {
+    "en": "KITE",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1762274825.svg",
+    "type": "crypto",
+    "apiSymbol": "KITE"
+  },
+  "snx": {
+    "en": "Synthetix",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/snx.svg",
+    "type": "crypto",
+    "apiSymbol": "SNX"
+  },
+  "dexe": {
+    "en": "DeXe",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/dexe.svg",
+    "type": "crypto",
+    "apiSymbol": "DEXE"
+  },
+  "dydx": {
+    "en": "dYdX",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/dydx.svg",
+    "type": "crypto",
+    "apiSymbol": "DYDX"
+  },
+  "lpt": {
+    "en": "Livepeer",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/lpt.svg",
+    "type": "crypto",
+    "apiSymbol": "LPT"
+  },
+  "chip": {
+    "en": "CHIP",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1777368287.svg",
+    "type": "crypto",
+    "apiSymbol": "CHIP"
+  },
+  "toshi": {
+    "en": "Toshi",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1762884226.png",
+    "type": "crypto",
+    "apiSymbol": "TOSHI"
+  },
+  "grass": {
+    "en": "Grass",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1733596470.svg",
+    "type": "crypto",
+    "apiSymbol": "GRASS"
+  },
+  "sfp": {
+    "en": "SafePal",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/sfp.svg",
+    "type": "crypto",
+    "apiSymbol": "SFP"
+  },
+  "soso": {
+    "en": "SoSoValue",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1767189579.svg",
+    "type": "crypto",
+    "apiSymbol": "SOSO"
+  },
+  "mx": {
+    "en": "MX Token",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778660834.svg",
+    "type": "crypto",
+    "apiSymbol": "MX"
+  },
+  "pieverse": {
+    "en": "PIEVERSE",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1767189397.svg",
+    "type": "crypto",
+    "apiSymbol": "PIEVERSE"
+  },
+  "form": {
+    "en": "FORM",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1743235200.png",
+    "type": "crypto",
+    "apiSymbol": "FORM"
+  },
+  "data": {
+    "en": "DATA",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/data.svg",
+    "type": "crypto",
+    "apiSymbol": "DATA"
+  },
+  "turbo": {
+    "en": "Turbo",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1727254883.png",
+    "type": "crypto",
+    "apiSymbol": "TURBO"
+  },
+  "super": {
+    "en": "SuperVerse",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/super.svg",
+    "type": "crypto",
+    "apiSymbol": "SUPER"
+  },
+  "ksm": {
+    "en": "Kusama",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/ksm.svg",
+    "type": "crypto",
+    "apiSymbol": "KSM"
+  },
+  "ctc": {
+    "en": "Creditcoin",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/ctc.svg",
+    "type": "crypto",
+    "apiSymbol": "CTC"
+  },
+  "met": {
+    "en": "Metis",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/met.svg",
+    "type": "crypto",
+    "apiSymbol": "MET"
+  },
+  "velo": {
+    "en": "Velo",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/velo.svg",
+    "type": "crypto",
+    "apiSymbol": "VELO"
+  },
+  "cow": {
+    "en": "CoW Protocol",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759380064.svg",
+    "type": "crypto",
+    "apiSymbol": "COW"
+  },
+  "rose": {
+    "en": "Oasis Network",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/rose.svg",
+    "type": "crypto",
+    "apiSymbol": "ROSE"
+  },
+  "cfg": {
+    "en": "Centrifuge",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/cfg.svg",
+    "type": "crypto",
+    "apiSymbol": "CFG"
+  },
+  "yfi": {
+    "en": "yearn.finance",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/yfi.svg",
+    "type": "crypto",
+    "apiSymbol": "YFI"
+  },
+  "kaito": {
+    "en": "Kaito",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759060437.png",
+    "type": "crypto",
+    "apiSymbol": "KAITO"
+  },
+  "babydoge": {
+    "en": "Baby Doge Coin",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/babydoge.svg",
+    "type": "crypto",
+    "apiSymbol": "BABYDOGE"
+  },
+  "mog": {
+    "en": "Mog Coin",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1764499755.svg",
+    "type": "crypto",
+    "apiSymbol": "MOG"
+  },
+  "zrx": {
+    "en": "0x Protocol",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/zrx.svg",
+    "type": "crypto",
+    "apiSymbol": "ZRX"
+  },
+  "linea": {
+    "en": "Linea",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1758642468.svg",
+    "type": "crypto",
+    "apiSymbol": "LINEA"
+  },
+  "akt": {
+    "en": "Akash Network",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/akt.svg",
+    "type": "crypto",
+    "apiSymbol": "AKT"
+  },
+  "arkm": {
+    "en": "Arkham",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/arkm.svg",
+    "type": "crypto",
+    "apiSymbol": "ARKM"
+  },
+  "useless": {
+    "en": "Useless Coin",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1760523353.png",
+    "type": "crypto",
+    "apiSymbol": "USELESS"
+  },
+  "tlton": {
+    "en": "TLTON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1783417664.svg",
+    "type": "crypto",
+    "apiSymbol": "TLTON"
+  },
+  "deep": {
+    "en": "DeepBook",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1739621085.svg",
+    "type": "crypto",
+    "apiSymbol": "DEEP"
+  },
+  "mina": {
+    "en": "Mina Protocol",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/mina.svg",
+    "type": "crypto",
+    "apiSymbol": "MINA"
+  },
+  "safe": {
+    "en": "Safe",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/safe.svg",
+    "type": "crypto",
+    "apiSymbol": "SAFE"
+  },
+  "move": {
+    "en": "Movement",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1739619326.svg",
+    "type": "crypto",
+    "apiSymbol": "MOVE"
+  },
+  "edu": {
+    "en": "Open Campus",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/edu.svg",
+    "type": "crypto",
+    "apiSymbol": "EDU"
+  },
+  "zil": {
+    "en": "Zilliqa",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/zil.svg",
+    "type": "crypto",
+    "apiSymbol": "ZIL"
+  },
+  "t": {
+    "en": "Threshold",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/t.svg",
+    "type": "crypto",
+    "apiSymbol": "T"
+  },
+  "popcat": {
+    "en": "Popcat",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/popcat.svg",
+    "type": "crypto",
+    "apiSymbol": "POPCAT"
+  },
+  "aleo": {
+    "en": "Aleo",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766602356.svg",
+    "type": "crypto",
+    "apiSymbol": "ALEO"
+  },
+  "mega": {
+    "en": "MEGA",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1779018448.svg",
+    "type": "crypto",
+    "apiSymbol": "MEGA"
+  },
+  "ordi": {
+    "en": "ORDI",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/ordi.svg",
+    "type": "crypto",
+    "apiSymbol": "ORDI"
+  },
+  "drift": {
+    "en": "Drift",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1732545805.png",
+    "type": "crypto",
+    "apiSymbol": "DRIFT"
+  },
+  "mew": {
+    "en": "cat in a dogs world",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/mew.svg",
+    "type": "crypto",
+    "apiSymbol": "MEW"
+  },
+  "hot": {
+    "en": "Holo",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/hot.svg",
+    "type": "crypto",
+    "apiSymbol": "HOT"
+  },
+  "zeta": {
+    "en": "ZetaChain",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1714126902.svg",
+    "type": "crypto",
+    "apiSymbol": "ZETA"
+  },
+  "qtum": {
+    "en": "Qtum",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/qtum.svg",
+    "type": "crypto",
+    "apiSymbol": "QTUM"
+  },
+  "me": {
+    "en": "Magic Eden",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1758642541.svg",
+    "type": "crypto",
+    "apiSymbol": "ME"
+  },
+  "sushi": {
+    "en": "SushiSwap",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/sushi.svg",
+    "type": "crypto",
+    "apiSymbol": "SUSHI"
+  },
+  "rain": {
+    "en": "Rain",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/rain.svg",
+    "type": "crypto",
+    "apiSymbol": "RAIN"
+  },
+  "kava": {
+    "en": "Kava",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/kava.svg",
+    "type": "crypto",
+    "apiSymbol": "KAVA"
+  },
+  "ub": {
+    "en": "UB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1761140846.png",
+    "type": "crypto",
+    "apiSymbol": "UB"
+  },
+  "nxpc": {
+    "en": "NXPC",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1762702922.svg",
+    "type": "crypto",
+    "apiSymbol": "NXPC"
+  },
+  "pnut": {
+    "en": "Peanut the Squirrel",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1732986288.png",
+    "type": "crypto",
+    "apiSymbol": "PNUT"
+  },
+  "bio": {
+    "en": "BIO",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/bio.svg",
+    "type": "crypto",
+    "apiSymbol": "BIO"
+  },
+  "avnt": {
+    "en": "Avantis",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/avnt.svg",
+    "type": "crypto",
+    "apiSymbol": "AVNT"
+  },
+  "bera": {
+    "en": "Berachain",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766602249.svg",
+    "type": "crypto",
+    "apiSymbol": "BERA"
+  },
+  "icnt": {
+    "en": "ICNT",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759740499.svg",
+    "type": "crypto",
+    "apiSymbol": "ICNT"
+  },
+  "irys": {
+    "en": "IRYS",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1765296124.svg",
+    "type": "crypto",
+    "apiSymbol": "IRYS"
+  },
+  "blur": {
+    "en": "Blur",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/blur.svg",
+    "type": "crypto",
+    "apiSymbol": "BLUR"
+  },
+  "prove": {
+    "en": "PROVE",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1755839211.svg",
+    "type": "crypto",
+    "apiSymbol": "PROVE"
+  },
+  "moodeng": {
+    "en": "Moo Deng",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1729617288.png",
+    "type": "crypto",
+    "apiSymbol": "MOODENG"
+  },
+  "gmx": {
+    "en": "GMX",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/gmx.svg",
+    "type": "crypto",
+    "apiSymbol": "GMX"
+  },
+  "pons": {
+    "en": "PONS",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1788348512.png",
+    "type": "crypto",
+    "apiSymbol": "PONS"
+  },
+  "coai": {
+    "en": "COAI",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1760523713.svg",
+    "type": "crypto",
+    "apiSymbol": "COAI"
+  },
+  "tac": {
+    "en": "TAC",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1782742854.svg",
+    "type": "crypto",
+    "apiSymbol": "TAC"
+  },
+  "cys": {
+    "en": "CYS",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786445921.svg",
+    "type": "crypto",
+    "apiSymbol": "CYS"
+  },
+  "nmr": {
+    "en": "Numeraire",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/nmr.svg",
+    "type": "crypto",
+    "apiSymbol": "NMR"
+  },
+  "vtho": {
+    "en": "VeThor Token",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/vtho.svg",
+    "type": "crypto",
+    "apiSymbol": "VTHO"
+  },
+  "bill": {
+    "en": "Bill",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778409608.svg",
+    "type": "crypto",
+    "apiSymbol": "BILL"
+  },
+  "vana": {
+    "en": "Vana",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766589571.svg",
+    "type": "crypto",
+    "apiSymbol": "VANA"
+  },
+  "somi": {
+    "en": "Somnia",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1776947812.svg",
+    "type": "crypto",
+    "apiSymbol": "SOMI"
+  },
+  "cashcat": {
+    "en": "CASHCAT",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786446075.png",
+    "type": "crypto",
+    "apiSymbol": "CASHCAT"
+  },
+  "ake": {
+    "en": "AKE",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1788348332.svg",
+    "type": "crypto",
+    "apiSymbol": "AKE"
+  },
+  "allo": {
+    "en": "Allora",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766602449.svg",
+    "type": "crypto",
+    "apiSymbol": "ALLO"
+  },
+  "at": {
+    "en": "APRO",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766602522.svg",
+    "type": "crypto",
+    "apiSymbol": "AT"
+  },
+  "init": {
+    "en": "Inertia",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1767189319.svg",
+    "type": "crypto",
+    "apiSymbol": "INIT"
+  },
+  "zkp": {
+    "en": "ZKP",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766594979.svg",
+    "type": "crypto",
+    "apiSymbol": "ZKP"
+  },
+  "red": {
+    "en": "RED",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766602614.svg",
+    "type": "crypto",
+    "apiSymbol": "RED"
+  },
+  "zig": {
+    "en": "ZIG",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1767189487.svg",
+    "type": "crypto",
+    "apiSymbol": "ZIG"
+  },
+  "dood": {
+    "en": "DOOD",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766595167.png",
+    "type": "crypto",
+    "apiSymbol": "DOOD"
+  },
+  "cpool": {
+    "en": "Clearpool",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1767189636.svg",
+    "type": "crypto",
+    "apiSymbol": "CPOOL"
+  },
+  "dos": {
+    "en": "DOS",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786446000.svg",
+    "type": "crypto",
+    "apiSymbol": "DOS"
+  },
+  "cspr": {
+    "en": "Casper",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/cspr.svg",
+    "type": "crypto",
+    "apiSymbol": "CSPR"
+  },
+  "bsb": {
+    "en": "BSB",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/bsb.svg",
+    "type": "crypto",
+    "apiSymbol": "BSB"
+  },
+  "soph": {
+    "en": "Sophon",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1767189889.svg",
+    "type": "crypto",
+    "apiSymbol": "SOPH"
+  },
+  "re": {
+    "en": "Re",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1781884675.svg",
+    "type": "crypto",
+    "apiSymbol": "RE"
+  },
+  "flux": {
+    "en": "Flux",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/flux.svg",
+    "type": "crypto",
+    "apiSymbol": "FLUX"
+  },
+  "cxt": {
+    "en": "CXT",
+    "icon": "https://cdn-coins.bitpinex.com/image/coin/logo/cxt-logo.svg",
+    "type": "crypto",
+    "apiSymbol": "CXT"
+  },
+  "dgai": {
+    "en": "DGAI",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1788348437.png",
+    "type": "crypto",
+    "apiSymbol": "DGAI"
+  },
+  "tria": {
+    "en": "TRIA",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778924972.svg",
+    "type": "crypto",
+    "apiSymbol": "TRIA"
+  },
+  "the": {
+    "en": "THENA",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1758556065.svg",
+    "type": "crypto",
+    "apiSymbol": "THE"
+  },
+  "mubarak": {
+    "en": "Mubarak",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759655512.png",
+    "type": "crypto",
+    "apiSymbol": "MUBARAK"
+  },
+  "pros": {
+    "en": "Prosper",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/pros.svg",
+    "type": "crypto",
+    "apiSymbol": "PROS"
+  },
+  "broccoli": {
+    "en": "Broccoli",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1758556426.svg",
+    "type": "crypto",
+    "apiSymbol": "BROCCOLI"
+  },
+  "zkc": {
+    "en": "ZKC",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759156446.svg",
+    "type": "crypto",
+    "apiSymbol": "ZKC"
+  },
+  "mantra": {
+    "en": "MANTRA",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1773054153.svg",
+    "type": "crypto",
+    "apiSymbol": "MANTRA"
+  },
+  "mira": {
+    "en": "MIRA",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759243713.svg",
+    "type": "crypto",
+    "apiSymbol": "MIRA"
+  },
+  "skr": {
+    "en": "SKR",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1769841339.svg",
+    "type": "crypto",
+    "apiSymbol": "SKR"
+  },
+  "eden": {
+    "en": "EDEN",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759379994.svg",
+    "type": "crypto",
+    "apiSymbol": "EDEN"
+  },
+  "holo": {
+    "en": "Holo",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759380650.png",
+    "type": "crypto",
+    "apiSymbol": "HOLO"
+  },
+  "apex": {
+    "en": "APEX",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/apex.svg",
+    "type": "crypto",
+    "apiSymbol": "APEX"
+  },
+  "aztec": {
+    "en": "AZTEC",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771830519.svg",
+    "type": "crypto",
+    "apiSymbol": "AZTEC"
+  },
+  "sign": {
+    "en": "Sign",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759657348.png",
+    "type": "crypto",
+    "apiSymbol": "SIGN"
+  },
+  "f": {
+    "en": "F",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759740569.png",
+    "type": "crypto",
+    "apiSymbol": "F"
+  },
+  "yb": {
+    "en": "YB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1760541109.svg",
+    "type": "crypto",
+    "apiSymbol": "YB"
+  },
+  "frax": {
+    "en": "Frax",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/frax.svg",
+    "type": "crypto",
+    "apiSymbol": "FRAX"
+  },
+  "take": {
+    "en": "TAKE",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1760867386.png",
+    "type": "crypto",
+    "apiSymbol": "TAKE"
+  },
+  "zbt": {
+    "en": "ZBT",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1760866471.svg",
+    "type": "crypto",
+    "apiSymbol": "ZBT"
+  },
+  "recall": {
+    "en": "RECALL",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1760867443.png",
+    "type": "crypto",
+    "apiSymbol": "RECALL"
+  },
+  "bless": {
+    "en": "Bless",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1760866639.svg",
+    "type": "crypto",
+    "apiSymbol": "BLESS"
+  },
+  "huma": {
+    "en": "Huma Finance",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1760867491.png",
+    "type": "crypto",
+    "apiSymbol": "HUMA"
+  },
+  "lab": {
+    "en": "LAB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1760867540.png",
+    "type": "crypto",
+    "apiSymbol": "LAB"
+  },
+  "opg": {
+    "en": "OPG",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1776855445.svg",
+    "type": "crypto",
+    "apiSymbol": "OPG"
+  },
+  "bank": {
+    "en": "Bank",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1760866848.svg",
+    "type": "crypto",
+    "apiSymbol": "BANK"
+  },
+  "eul": {
+    "en": "Euler",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1761484566.svg",
+    "type": "crypto",
+    "apiSymbol": "EUL"
+  },
+  "bananas31": {
+    "en": "Bananas31",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1784631745.svg",
+    "type": "crypto",
+    "apiSymbol": "BANANAS31"
+  },
+  "enso": {
+    "en": "ENSO",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1761484631.svg",
+    "type": "crypto",
+    "apiSymbol": "ENSO"
+  },
+  "dego": {
+    "en": "Dego Finance",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "DEGO"
+  },
+  "giggle": {
+    "en": "GIGGLE",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1761484832.png",
+    "type": "crypto",
+    "apiSymbol": "GIGGLE"
+  },
+  "aria": {
+    "en": "ARIA",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1762274754.png",
+    "type": "crypto",
+    "apiSymbol": "ARIA"
+  },
+  "bas": {
+    "en": "BAS",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1762274879.svg",
+    "type": "crypto",
+    "apiSymbol": "BAS"
+  },
+  "solv": {
+    "en": "Solv Protocol",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1762275033.svg",
+    "type": "crypto",
+    "apiSymbol": "SOLV"
+  },
+  "turtle": {
+    "en": "Turtle",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1762275110.svg",
+    "type": "crypto",
+    "apiSymbol": "TURTLE"
+  },
+  "mmt": {
+    "en": "MMT",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1762702656.svg",
+    "type": "crypto",
+    "apiSymbol": "MMT"
+  },
+  "dbr": {
+    "en": "DBR",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1762702786.svg",
+    "type": "crypto",
+    "apiSymbol": "DBR"
+  },
+  "wct": {
+    "en": "WalletConnect",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/wct.svg",
+    "type": "crypto",
+    "apiSymbol": "WCT"
+  },
+  "elizaos": {
+    "en": "ELIZAOS",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "ELIZAOS"
+  },
+  "es": {
+    "en": "ES",
+    "icon": "https://cdn-coins.bitpinex.com/image/coin/logo/es-logo.svg",
+    "type": "crypto",
+    "apiSymbol": "ES"
+  },
+  "haedal": {
+    "en": "Haedal",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1762884102.svg",
+    "type": "crypto",
+    "apiSymbol": "HAEDAL"
+  },
+  "synd": {
+    "en": "Syndicate",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "SYND"
+  },
+  "rvn": {
+    "en": "Ravencoin",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/rvn.svg",
+    "type": "crypto",
+    "apiSymbol": "RVN"
+  },
+  "uai": {
+    "en": "UAI",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1763372594.svg",
+    "type": "crypto",
+    "apiSymbol": "UAI"
+  },
+  "trust": {
+    "en": "Trust",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1763372661.png",
+    "type": "crypto",
+    "apiSymbol": "TRUST"
+  },
+  "jct": {
+    "en": "JCT",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1763372841.png",
+    "type": "crypto",
+    "apiSymbol": "JCT"
+  },
+  "prompt": {
+    "en": "Prompt",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1763372905.svg",
+    "type": "crypto",
+    "apiSymbol": "PROMPT"
+  },
+  "xmn": {
+    "en": "XMN",
+    "icon": "https://cdn-coins.bitpinex.com/image/coin/logo/xmn-logo.svg",
+    "type": "crypto",
+    "apiSymbol": "XMN"
+  },
+  "abbvx": {
+    "en": "AbbVie xStock",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785567744.svg",
+    "type": "crypto",
+    "apiSymbol": "ABBVX"
+  },
+  "resolv": {
+    "en": "Resolv",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1764067111.svg",
+    "type": "crypto",
+    "apiSymbol": "RESOLV"
+  },
+  "parti": {
+    "en": "Particle",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1764067181.svg",
+    "type": "crypto",
+    "apiSymbol": "PARTI"
+  },
+  "newt": {
+    "en": "Newton",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1764499506.svg",
+    "type": "crypto",
+    "apiSymbol": "NEWT"
+  },
+  "sqd": {
+    "en": "SQD",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1764499591.svg",
+    "type": "crypto",
+    "apiSymbol": "SQD"
+  },
+  "folks": {
+    "en": "Folks",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1765296205.svg",
+    "type": "crypto",
+    "apiSymbol": "FOLKS"
+  },
+  "hyper": {
+    "en": "Hyper",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1754380020.svg",
+    "type": "crypto",
+    "apiSymbol": "HYPER"
+  },
+  "sahara": {
+    "en": "Sahara AI",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1754379924.svg",
+    "type": "crypto",
+    "apiSymbol": "SAHARA"
+  },
+  "tree": {
+    "en": "Tree",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1754379759.svg",
+    "type": "crypto",
+    "apiSymbol": "TREE"
+  },
+  "era": {
+    "en": "ERA",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1754379593.svg",
+    "type": "crypto",
+    "apiSymbol": "ERA"
+  },
+  "ika": {
+    "en": "IKA",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1757320467.svg",
+    "type": "crypto",
+    "apiSymbol": "IKA"
+  },
+  "euri": {
+    "en": "EURI",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771830642.svg",
+    "type": "crypto",
+    "apiSymbol": "EURI"
+  },
+  "jellyjelly": {
+    "en": "JellyJelly",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1757320970.svg",
+    "type": "crypto",
+    "apiSymbol": "JELLYJELLY"
+  },
+  "hemi": {
+    "en": "Hemi",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1758642336.svg",
+    "type": "crypto",
+    "apiSymbol": "HEMI"
+  },
+  "mbg": {
+    "en": "MBG",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1758642613.svg",
+    "type": "crypto",
+    "apiSymbol": "MBG"
+  },
+  "open": {
+    "en": "OPEN",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/open.svg",
+    "type": "crypto",
+    "apiSymbol": "OPEN"
+  },
+  "zeus": {
+    "en": "ZEUS",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "ZEUS"
+  },
+  "la": {
+    "en": "LA",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759657472.png",
+    "type": "crypto",
+    "apiSymbol": "LA"
+  },
+  "mub": {
+    "en": "MUB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1783417535.png",
+    "type": "crypto",
+    "apiSymbol": "MUB"
+  },
+  "puffer": {
+    "en": "Puffer",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766401333.svg",
+    "type": "crypto",
+    "apiSymbol": "PUFFER"
+  },
+  "chillguy": {
+    "en": "Just a chill guy",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766401593.png",
+    "type": "crypto",
+    "apiSymbol": "CHILLGUY"
+  },
+  "fuel": {
+    "en": "Fuel",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/fuel.svg",
+    "type": "crypto",
+    "apiSymbol": "FUEL"
+  },
+  "polyx": {
+    "en": "Polyx",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/polyx.svg",
+    "type": "crypto",
+    "apiSymbol": "POLYX"
+  },
+  "tai": {
+    "en": "TAI",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766401874.svg",
+    "type": "crypto",
+    "apiSymbol": "TAI"
+  },
+  "wet": {
+    "en": "WET",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766401918.png",
+    "type": "crypto",
+    "apiSymbol": "WET"
+  },
+  "peaq": {
+    "en": "peaq",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1766507861.svg",
+    "type": "crypto",
+    "apiSymbol": "PEAQ"
+  },
+  "usual": {
+    "en": "Usual",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1753092718.svg",
+    "type": "crypto",
+    "apiSymbol": "USUAL"
+  },
+  "hsk": {
+    "en": "HashKey",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778055143.svg",
+    "type": "crypto",
+    "apiSymbol": "HSK"
+  },
+  "cookie": {
+    "en": "Cookie",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1753108597.svg",
+    "type": "crypto",
+    "apiSymbol": "COOKIE"
+  },
+  "gps": {
+    "en": "GPS",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1783148388.svg",
+    "type": "crypto",
+    "apiSymbol": "GPS"
+  },
+  "anime": {
+    "en": "Animecoin",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1753112158.png",
+    "type": "crypto",
+    "apiSymbol": "ANIME"
+  },
+  "banana": {
+    "en": "Banana",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1753112296.svg",
+    "type": "crypto",
+    "apiSymbol": "BANANA"
+  },
+  "dusk": {
+    "en": "Dusk",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1769841138.svg",
+    "type": "crypto",
+    "apiSymbol": "DUSK"
+  },
+  "zama": {
+    "en": "Zama",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771830414.svg",
+    "type": "crypto",
+    "apiSymbol": "ZAMA"
+  },
+  "agld": {
+    "en": "Adventure Gold",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1753112484.svg",
+    "type": "crypto",
+    "apiSymbol": "AGLD"
+  },
+  "pha": {
+    "en": "Phala Network",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/pha.svg",
+    "type": "crypto",
+    "apiSymbol": "PHA"
+  },
+  "bico": {
+    "en": "Biconomy",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/bico.svg",
+    "type": "crypto",
+    "apiSymbol": "BICO"
+  },
+  "ach": {
+    "en": "Alchemy Pay",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1751989016.svg",
+    "type": "crypto",
+    "apiSymbol": "ACH"
+  },
+  "prom": {
+    "en": "Prom",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/prom.svg",
+    "type": "crypto",
+    "apiSymbol": "PROM"
+  },
+  "nvdax": {
+    "en": "NVIDIA xStock",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787420691.svg",
+    "type": "crypto",
+    "apiSymbol": "NVDAX"
+  },
+  "coinx": {
+    "en": "Coinbase xStock",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1751639672.svg",
+    "type": "crypto",
+    "apiSymbol": "COINX"
+  },
+  "crclx": {
+    "en": "Circle xStock",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1751794358.svg",
+    "type": "crypto",
+    "apiSymbol": "CRCLX"
+  },
+  "tslax": {
+    "en": "Tesla xStock",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "TSLAX"
+  },
+  "metax": {
+    "en": "Meta xStock",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1751794516.svg",
+    "type": "crypto",
+    "apiSymbol": "METAX"
+  },
+  "googlx": {
+    "en": "Google xStock",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1751794534.svg",
+    "type": "crypto",
+    "apiSymbol": "GOOGLX"
+  },
+  "aaplx": {
+    "en": "Apple xStock",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1751794555.svg",
+    "type": "crypto",
+    "apiSymbol": "AAPLX"
+  },
+  "esp": {
+    "en": "ESP",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/esp.svg",
+    "type": "crypto",
+    "apiSymbol": "ESP"
+  },
+  "kgen": {
+    "en": "KGeN",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787029567.svg",
+    "type": "crypto",
+    "apiSymbol": "KGEN"
+  },
+  "hoodx": {
+    "en": "Robinhood xStock",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1751794573.svg",
+    "type": "crypto",
+    "apiSymbol": "HOODX"
+  },
+  "amznx": {
+    "en": "Amazon xStock",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1751794642.svg",
+    "type": "crypto",
+    "apiSymbol": "AMZNX"
+  },
+  "home": {
+    "en": "HOME",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778046874.svg",
+    "type": "crypto",
+    "apiSymbol": "HOME"
+  },
+  "aigensyn": {
+    "en": "AIGENSYN",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1779018582.svg",
+    "type": "crypto",
+    "apiSymbol": "AIGENSYN"
+  },
+  "aixbt": {
+    "en": "AIXBT",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1751988594.png",
+    "type": "crypto",
+    "apiSymbol": "AIXBT"
+  },
+  "epic": {
+    "en": "Epic Cash",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1755840227.svg",
+    "type": "crypto",
+    "apiSymbol": "EPIC"
+  },
+  "plume": {
+    "en": "Plume",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1756966984.svg",
+    "type": "crypto",
+    "apiSymbol": "PLUME"
+  },
+  "grvt": {
+    "en": "GRVT",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786445840.svg",
+    "type": "crypto",
+    "apiSymbol": "GRVT"
+  },
+  "sapien": {
+    "en": "SAPIEN",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1757320721.svg",
+    "type": "crypto",
+    "apiSymbol": "SAPIEN"
+  },
+  "wild": {
+    "en": "Wilder World",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/wild.svg",
+    "type": "crypto",
+    "apiSymbol": "WILD"
+  },
+  "gaia": {
+    "en": "GAIA",
+    "icon": "https://cdn-coins.bitpinex.com/image/coin/logo/gaia-logo.svg",
+    "type": "crypto",
+    "apiSymbol": "GAIA"
+  },
+  "towns": {
+    "en": "Towns",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1756967274.svg",
+    "type": "crypto",
+    "apiSymbol": "TOWNS"
+  },
+  "spk": {
+    "en": "Spark",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1756967367.svg",
+    "type": "crypto",
+    "apiSymbol": "SPK"
+  },
+  "slx": {
+    "en": "SLX",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1781086599.png",
+    "type": "crypto",
+    "apiSymbol": "SLX"
+  },
+  "hei": {
+    "en": "Heima",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1740303146.svg",
+    "type": "crypto",
+    "apiSymbol": "HEI"
+  },
+  "blum": {
+    "en": "Blum",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "BLUM"
+  },
+  "order": {
+    "en": "Orderly",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1758556185.svg",
+    "type": "crypto",
+    "apiSymbol": "ORDER"
+  },
+  "white": {
+    "en": "White",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "WHITE"
+  },
+  "robo": {
+    "en": "ROBO",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778046626.svg",
+    "type": "crypto",
+    "apiSymbol": "ROBO"
+  },
+  "zkj": {
+    "en": "ZKJ",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1749369310.svg",
+    "type": "crypto",
+    "apiSymbol": "ZKJ"
+  },
+  "baby": {
+    "en": "Baby",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1768809474.svg",
+    "type": "crypto",
+    "apiSymbol": "BABY"
+  },
+  "memefi": {
+    "en": "MemeFi",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "MEMEFI"
+  },
+  "pond": {
+    "en": "Marlin",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/pond.svg",
+    "type": "crypto",
+    "apiSymbol": "POND"
+  },
+  "goat": {
+    "en": "Goatseus Maximus",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1733591569.png",
+    "type": "crypto",
+    "apiSymbol": "GOAT"
+  },
+  "x": {
+    "en": "X",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/x.svg",
+    "type": "crypto",
+    "apiSymbol": "X"
+  },
+  "qqqon": {
+    "en": "QQQON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785568530.svg",
+    "type": "crypto",
+    "apiSymbol": "QQQON"
+  },
+  "stbl": {
+    "en": "STBL",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1758642192.svg",
+    "type": "crypto",
+    "apiSymbol": "STBL"
+  },
+  "xan": {
+    "en": "XAN",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1759243355.svg",
+    "type": "crypto",
+    "apiSymbol": "XAN"
+  },
+  "io": {
+    "en": "io.net",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1729665674.svg",
+    "type": "crypto",
+    "apiSymbol": "IO"
+  },
+  "kaon": {
+    "en": "KAON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "KAON"
+  },
+  "act": {
+    "en": "Act I: The AI Prophecy",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/act.svg",
+    "type": "crypto",
+    "apiSymbol": "ACT"
+  },
+  "clv": {
+    "en": "Clover Finance",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "CLV"
+  },
+  "dia": {
+    "en": "DIA",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/dia.svg",
+    "type": "crypto",
+    "apiSymbol": "DIA"
+  },
+  "sxt": {
+    "en": "Space and Time",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1764067274.svg",
+    "type": "crypto",
+    "apiSymbol": "SXT"
+  },
+  "nes": {
+    "en": "NES",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1783417092.svg",
+    "type": "crypto",
+    "apiSymbol": "NES"
+  },
+  "pyr": {
+    "en": "Vulcan Forged",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/pyr.svg",
+    "type": "crypto",
+    "apiSymbol": "PYR"
+  },
+  "wat": {
+    "en": "WAT",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "WAT"
+  },
+  "dogs": {
+    "en": "Dogs",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/dogs.svg",
+    "type": "crypto",
+    "apiSymbol": "DOGS"
+  },
+  "major": {
+    "en": "Major",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1732388404.svg",
+    "type": "crypto",
+    "apiSymbol": "MAJOR"
+  },
+  "sundog": {
+    "en": "Sundog",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "SUNDOG"
+  },
+  "kii": {
+    "en": "KII",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786797263.png",
+    "type": "crypto",
+    "apiSymbol": "KII"
+  },
+  "strax": {
+    "en": "Stratis",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1768809365.svg",
+    "type": "crypto",
+    "apiSymbol": "STRAX"
+  },
+  "rbtc": {
+    "en": "RBTC",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "RBTC"
+  },
+  "orca": {
+    "en": "Orca",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1745311072.svg",
+    "type": "crypto",
+    "apiSymbol": "ORCA"
+  },
+  "layer": {
+    "en": "Layer",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1745312204.svg",
+    "type": "crypto",
+    "apiSymbol": "LAYER"
+  },
+  "rzr": {
+    "en": "RZR",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "RZR"
+  },
+  "cats": {
+    "en": "Cats",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "CATS"
+  },
+  "cat": {
+    "en": "Cat",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "CAT"
+  },
+  "cyber": {
+    "en": "Cyber",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/cyber.svg",
+    "type": "crypto",
+    "apiSymbol": "CYBER"
+  },
+  "neirocto": {
+    "en": "Neiro",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1727249549.png",
+    "type": "crypto",
+    "apiSymbol": "NEIROCTO"
+  },
+  "cati": {
+    "en": "Catizen",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1726261447.png",
+    "type": "crypto",
+    "apiSymbol": "CATI"
+  },
+  "spcxx": {
+    "en": "SPCXX",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "SPCXX"
+  },
+  "hmstr": {
+    "en": "Hamster Kombat",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1718772282.png",
+    "type": "crypto",
+    "apiSymbol": "HMSTR"
+  },
+  "alt": {
+    "en": "AltLayer",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1707304227.svg",
+    "type": "crypto",
+    "apiSymbol": "ALT"
+  },
+  "fhe": {
+    "en": "FHE",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1745315772.svg",
+    "type": "crypto",
+    "apiSymbol": "FHE"
+  },
+  "dym": {
+    "en": "Dymension",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1708075952.svg",
+    "type": "crypto",
+    "apiSymbol": "DYM"
+  },
+  "pixfi": {
+    "en": "PixFi",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "PIXFI"
+  },
+  "vine": {
+    "en": "Vine",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "VINE"
+  },
+  "bome": {
+    "en": "BOOK OF MEME",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1711273302.png",
+    "type": "crypto",
+    "apiSymbol": "BOME"
+  },
+  "bb": {
+    "en": "BounceBit",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778661049.svg",
+    "type": "crypto",
+    "apiSymbol": "BB"
+  },
+  "spell": {
+    "en": "Spell Token",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1710228753.png",
+    "type": "crypto",
+    "apiSymbol": "SPELL"
+  },
+  "ponke": {
+    "en": "Ponke",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1723394440.png",
+    "type": "crypto",
+    "apiSymbol": "PONKE"
+  },
+  "pixel": {
+    "en": "Pixels",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1709564153.png",
+    "type": "crypto",
+    "apiSymbol": "PIXEL"
+  },
+  "paws": {
+    "en": "PAWS",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "PAWS"
+  },
+  "lista": {
+    "en": "Lista DAO",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1723219238.svg",
+    "type": "crypto",
+    "apiSymbol": "LISTA"
+  },
+  "stg": {
+    "en": "Stargate Finance",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/stg.svg",
+    "type": "crypto",
+    "apiSymbol": "STG"
+  },
+  "beamx": {
+    "en": "Beam",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1709565291.svg",
+    "type": "crypto",
+    "apiSymbol": "BEAMX"
+  },
+  "portal": {
+    "en": "Portal",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1710229004.png",
+    "type": "crypto",
+    "apiSymbol": "PORTAL"
+  },
+  "gme": {
+    "en": "GME",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "GME"
+  },
+  "brev": {
+    "en": "BREV",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1776855555.svg",
+    "type": "crypto",
+    "apiSymbol": "BREV"
+  },
+  "farm": {
+    "en": "Harvest Finance",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/farm.svg",
+    "type": "crypto",
+    "apiSymbol": "FARM"
+  },
+  "mavia": {
+    "en": "Heroes of Mavia",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1709573822.svg",
+    "type": "crypto",
+    "apiSymbol": "MAVIA"
+  },
+  "dao": {
+    "en": "DAO Maker",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/dao.svg",
+    "type": "crypto",
+    "apiSymbol": "DAO"
+  },
+  "gtc": {
+    "en": "Gitcoin",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/gtc.svg",
+    "type": "crypto",
+    "apiSymbol": "GTC"
+  },
+  "agi": {
+    "en": "AGI",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/agi.svg",
+    "type": "crypto",
+    "apiSymbol": "AGI"
+  },
+  "waxp": {
+    "en": "WAX",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1710229664.png",
+    "type": "crypto",
+    "apiSymbol": "WAXP"
+  },
+  "spyon": {
+    "en": "SPYON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1771840244.svg",
+    "type": "crypto",
+    "apiSymbol": "SPYON"
+  },
+  "acu": {
+    "en": "ACU",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786797358.svg",
+    "type": "crypto",
+    "apiSymbol": "ACU"
+  },
+  "cap": {
+    "en": "Cap",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/cap.svg",
+    "type": "crypto",
+    "apiSymbol": "CAP"
+  },
+  "srm": {
+    "en": "Serum",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/srm.svg",
+    "type": "crypto",
+    "apiSymbol": "SRM"
+  },
+  "g": {
+    "en": "Gravity",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1725191646.svg",
+    "type": "crypto",
+    "apiSymbol": "G"
+  },
+  "mdt": {
+    "en": "Measurable Data Token",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "MDT"
+  },
+  "magic": {
+    "en": "Magic",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/magic.svg",
+    "type": "crypto",
+    "apiSymbol": "MAGIC"
+  },
+  "slerf": {
+    "en": "Slerf",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "SLERF"
+  },
+  "aevo": {
+    "en": "Aevo",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1713184641.svg",
+    "type": "crypto",
+    "apiSymbol": "AEVO"
+  },
+  "badger": {
+    "en": "Badger DAO",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/badger.svg",
+    "type": "crypto",
+    "apiSymbol": "BADGER"
+  },
+  "arx": {
+    "en": "ARX",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786797540.svg",
+    "type": "crypto",
+    "apiSymbol": "ARX"
+  },
+  "phb": {
+    "en": "Phoenix",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "PHB"
+  },
+  "manta": {
+    "en": "Manta Network",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/manta.svg",
+    "type": "crypto",
+    "apiSymbol": "MANTA"
+  },
+  "token": {
+    "en": "Token",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/token.svg",
+    "type": "crypto",
+    "apiSymbol": "TOKEN"
+  },
+  "nfp": {
+    "en": "NFPrompt",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "NFP"
+  },
+  "ssv": {
+    "en": "SSV Network",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/ssv.svg",
+    "type": "crypto",
+    "apiSymbol": "SSV"
+  },
+  "wen": {
+    "en": "Wen",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "WEN"
+  },
+  "tnsr": {
+    "en": "Tensor",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1714126788.png",
+    "type": "crypto",
+    "apiSymbol": "TNSR"
+  },
+  "zbu": {
+    "en": "ZBU",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "ZBU"
+  },
+  "xai": {
+    "en": "Xai",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/xai.svg",
+    "type": "crypto",
+    "apiSymbol": "XAI"
+  },
+  "tomi": {
+    "en": "TOMI",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/tomi.svg",
+    "type": "crypto",
+    "apiSymbol": "TOMI"
+  },
+  "ai": {
+    "en": "AI",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1704893110.svg",
+    "type": "crypto",
+    "apiSymbol": "AI"
+  },
+  "coq": {
+    "en": "Coq Inu",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "COQ"
+  },
+  "auction": {
+    "en": "Bounce",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1703411983.svg",
+    "type": "crypto",
+    "apiSymbol": "AUCTION"
+  },
+  "arpa": {
+    "en": "ARPA",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1709017170.svg",
+    "type": "crypto",
+    "apiSymbol": "ARPA"
+  },
+  "tut": {
+    "en": "TUT",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785945474.svg",
+    "type": "crypto",
+    "apiSymbol": "TUT"
+  },
+  "uma": {
+    "en": "UMA",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/uma.svg",
+    "type": "crypto",
+    "apiSymbol": "UMA"
+  },
+  "ygg": {
+    "en": "Yield Guild Games",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1701243013.svg",
+    "type": "crypto",
+    "apiSymbol": "YGG"
+  },
+  "peipei": {
+    "en": "PeiPei",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "PEIPEI"
+  },
+  "powr": {
+    "en": "Powerledger",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/powr.svg",
+    "type": "crypto",
+    "apiSymbol": "POWR"
+  },
+  "mln": {
+    "en": "Enzyme",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/mln.svg",
+    "type": "crypto",
+    "apiSymbol": "MLN"
+  },
+  "rlc": {
+    "en": "iExec RLC",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/rlc.svg",
+    "type": "crypto",
+    "apiSymbol": "RLC"
+  },
+  "waves": {
+    "en": "Waves",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/waves.svg",
+    "type": "crypto",
+    "apiSymbol": "WAVES"
+  },
+  "rez": {
+    "en": "Renzo",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1789282503.svg",
+    "type": "crypto",
+    "apiSymbol": "REZ"
+  },
+  "meme": {
+    "en": "Memecoin",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/meme.svg",
+    "type": "crypto",
+    "apiSymbol": "MEME"
+  },
+  "syn": {
+    "en": "Synapse",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/syn.svg",
+    "type": "crypto",
+    "apiSymbol": "SYN"
+  },
+  "rad": {
+    "en": "Radicle",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1706461979.svg",
+    "type": "crypto",
+    "apiSymbol": "RAD"
+  },
+  "bigtime": {
+    "en": "Big Time",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1701248064.svg",
+    "type": "crypto",
+    "apiSymbol": "BIGTIME"
+  },
+  "mubi": {
+    "en": "MUBI",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "MUBI"
+  },
+  "wsm": {
+    "en": "Wall Street Memes",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "WSM"
+  },
+  "myro": {
+    "en": "Myro",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "MYRO"
+  },
+  "milo": {
+    "en": "Milo",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "MILO"
+  },
+  "fitfi": {
+    "en": "Step App",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "FITFI"
+  },
+  "ace": {
+    "en": "Fusionist",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1707304805.png",
+    "type": "crypto",
+    "apiSymbol": "ACE"
+  },
+  "starl": {
+    "en": "StarLink",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "STARL"
+  },
+  "mstron": {
+    "en": "MSTRON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785568361.svg",
+    "type": "crypto",
+    "apiSymbol": "MSTRON"
+  },
+  "blok": {
+    "en": "Bloktopia",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "BLOK"
+  },
+  "xem": {
+    "en": "NEM",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/xem.svg",
+    "type": "crypto",
+    "apiSymbol": "XEM"
+  },
+  "raca": {
+    "en": "RACA",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/raca.svg",
+    "type": "crypto",
+    "apiSymbol": "RACA"
+  },
+  "blz": {
+    "en": "Bluzelle",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/blz.svg",
+    "type": "crypto",
+    "apiSymbol": "BLZ"
+  },
+  "pepe2": {
+    "en": "Pepe 2.0",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "PEPE2"
+  },
+  "shibai": {
+    "en": "SHIBAI",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "SHIBAI"
+  },
+  "lqty": {
+    "en": "Liquity",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/lqty.svg",
+    "type": "crypto",
+    "apiSymbol": "LQTY"
+  },
+  "ghst": {
+    "en": "Aavegotchi",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "GHST"
+  },
+  "tama": {
+    "en": "Tamadoge",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "TAMA"
+  },
+  "bone": {
+    "en": "Bone ShibaSwap",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "BONE"
+  },
+  "volt": {
+    "en": "Volt Inu",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "VOLT"
+  },
+  "based": {
+    "en": "Based",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/based.svg",
+    "type": "crypto",
+    "apiSymbol": "BASED"
+  },
+  "movr": {
+    "en": "Moonriver",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1745315235.svg",
+    "type": "crypto",
+    "apiSymbol": "MOVR"
+  },
+  "bob": {
+    "en": "BOB",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/bob.svg",
+    "type": "crypto",
+    "apiSymbol": "BOB"
+  },
+  "metis": {
+    "en": "Metis",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/metis.svg",
+    "type": "crypto",
+    "apiSymbol": "METIS"
+  },
+  "feg": {
+    "en": "FEG Token",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "FEG"
+  },
+  "iefaon": {
+    "en": "IEFAON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785569232.svg",
+    "type": "crypto",
+    "apiSymbol": "IEFAON"
+  },
+  "vinu": {
+    "en": "Vita Inu",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "VINU"
+  },
+  "dc": {
+    "en": "DC",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "DC"
+  },
+  "unfi": {
+    "en": "Unifi Protocol DAO",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/unfi.svg",
+    "type": "crypto",
+    "apiSymbol": "UNFI"
+  },
+  "hft": {
+    "en": "Hashflow",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/hft.svg",
+    "type": "crypto",
+    "apiSymbol": "HFT"
+  },
+  "aidoge": {
+    "en": "AIDOGE",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/aidoge.svg",
+    "type": "crypto",
+    "apiSymbol": "AIDOGE"
+  },
+  "mrvlon": {
+    "en": "MRVLON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787733027.svg",
+    "type": "crypto",
+    "apiSymbol": "MRVLON"
+  },
+  "rdnt": {
+    "en": "Radiant Capital",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/rdnt.svg",
+    "type": "crypto",
+    "apiSymbol": "RDNT"
+  },
+  "cgpt": {
+    "en": "ChainGPT",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1683405128.png",
+    "type": "crypto",
+    "apiSymbol": "CGPT"
+  },
+  "dramb": {
+    "en": "DRAMB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1784631102.png",
+    "type": "crypto",
+    "apiSymbol": "DRAMB"
+  },
+  "trvl": {
+    "en": "TRVL",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "TRVL"
+  },
+  "mdx": {
+    "en": "Mdex",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "MDX"
+  },
+  "elon": {
+    "en": "Dogelon Mars",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1638717966.png",
+    "type": "crypto",
+    "apiSymbol": "ELON"
+  },
+  "rpl": {
+    "en": "Rocket Pool",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/rpl.svg",
+    "type": "crypto",
+    "apiSymbol": "RPL"
+  },
+  "id": {
+    "en": "SPACE ID",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/id.svg",
+    "type": "crypto",
+    "apiSymbol": "ID"
+  },
+  "gmt": {
+    "en": "STEPN",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/gmt.svg",
+    "type": "crypto",
+    "apiSymbol": "GMT"
+  },
+  "luna": {
+    "en": "Terra",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/luna.svg",
+    "type": "crypto",
+    "apiSymbol": "LUNA"
+  },
+  "kat": {
+    "en": "Karat",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778660902.svg",
+    "type": "crypto",
+    "apiSymbol": "KAT"
+  },
+  "iotx": {
+    "en": "IoTeX",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/iotx.svg",
+    "type": "crypto",
+    "apiSymbol": "IOTX"
+  },
+  "taiko": {
+    "en": "Taiko",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778055229.svg",
+    "type": "crypto",
+    "apiSymbol": "TAIKO"
+  },
+  "combo": {
+    "en": "COMBO",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "COMBO"
+  },
+  "qi": {
+    "en": "BENQI",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/qi.svg",
+    "type": "crypto",
+    "apiSymbol": "QI"
+  },
+  "slf": {
+    "en": "SLF",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "SLF"
+  },
+  "celo": {
+    "en": "Celo",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/celo.svg",
+    "type": "crypto",
+    "apiSymbol": "CELO"
+  },
+  "bnt": {
+    "en": "Bancor",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/bnt.svg",
+    "type": "crypto",
+    "apiSymbol": "BNT"
+  },
+  "ankr": {
+    "en": "Ankr",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/ankr.svg",
+    "type": "crypto",
+    "apiSymbol": "ANKR"
+  },
+  "ont": {
+    "en": "Ontology",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/ont.svg",
+    "type": "crypto",
+    "apiSymbol": "ONT"
+  },
+  "skl": {
+    "en": "SKALE",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/skl.svg",
+    "type": "crypto",
+    "apiSymbol": "SKL"
+  },
+  "celr": {
+    "en": "Celer Network",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/celr.svg",
+    "type": "crypto",
+    "apiSymbol": "CELR"
+  },
+  "aggon": {
+    "en": "AGGON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785568722.svg",
+    "type": "crypto",
+    "apiSymbol": "AGGON"
+  },
+  "lumia": {
+    "en": "Lumia",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787028938.svg",
+    "type": "crypto",
+    "apiSymbol": "LUMIA"
+  },
+  "epx": {
+    "en": "EPX",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "EPX"
+  },
+  "glmr": {
+    "en": "Moonbeam",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/glmr.svg",
+    "type": "crypto",
+    "apiSymbol": "GLMR"
+  },
+  "win": {
+    "en": "WINkLink",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/win.svg",
+    "type": "crypto",
+    "apiSymbol": "WIN"
+  },
+  "dent": {
+    "en": "Dent",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/dent.svg",
+    "type": "crypto",
+    "apiSymbol": "DENT"
+  },
+  "audio": {
+    "en": "Audius",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/audio.svg",
+    "type": "crypto",
+    "apiSymbol": "AUDIO"
+  },
+  "intcon": {
+    "en": "INTCON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787564001.svg",
+    "type": "crypto",
+    "apiSymbol": "INTCON"
+  },
+  "ht": {
+    "en": "Huobi Token",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/ht.svg",
+    "type": "crypto",
+    "apiSymbol": "HT"
+  },
+  "alice": {
+    "en": "My Neighbor Alice",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697611712.png",
+    "type": "crypto",
+    "apiSymbol": "ALICE"
+  },
+  "chr": {
+    "en": "Chromia",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/chr.svg",
+    "type": "crypto",
+    "apiSymbol": "CHR"
+  },
+  "reef": {
+    "en": "Reef",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "REEF"
+  },
+  "acn": {
+    "en": "ACN",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1777369049.png",
+    "type": "crypto",
+    "apiSymbol": "ACN"
+  },
+  "coti": {
+    "en": "COTI",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/coti.svg",
+    "type": "crypto",
+    "apiSymbol": "COTI"
+  },
+  "people": {
+    "en": "ConstitutionDAO",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1676802271.png",
+    "type": "crypto",
+    "apiSymbol": "PEOPLE"
+  },
+  "knc": {
+    "en": "Kyber Network",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/knc.svg",
+    "type": "crypto",
+    "apiSymbol": "KNC"
+  },
+  "pols": {
+    "en": "Polkastarter",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/pols.svg",
+    "type": "crypto",
+    "apiSymbol": "POLS"
+  },
+  "bake": {
+    "en": "BakeryToken",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "BAKE"
+  },
+  "perp": {
+    "en": "Perpetual Protocol",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/perp.svg",
+    "type": "crypto",
+    "apiSymbol": "PERP"
+  },
+  "birb": {
+    "en": "BIRB",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/birb.svg",
+    "type": "crypto",
+    "apiSymbol": "BIRB"
+  },
+  "ftt": {
+    "en": "FTX Token",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/ftt.svg",
+    "type": "crypto",
+    "apiSymbol": "FTT"
+  },
+  "bttc": {
+    "en": "BitTorrent",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1643187459.svg",
+    "type": "crypto",
+    "apiSymbol": "BTTC"
+  },
+  "ctr": {
+    "en": "CTR",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/ctr.svg",
+    "type": "crypto",
+    "apiSymbol": "CTR"
+  },
+  "trb": {
+    "en": "Tellor",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/trb.svg",
+    "type": "crypto",
+    "apiSymbol": "TRB"
+  },
+  "hifi": {
+    "en": "Hifi Finance",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "HIFI"
+  },
+  "joe": {
+    "en": "Trader Joe",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1762165763.png",
+    "type": "crypto",
+    "apiSymbol": "JOE"
+  },
+  "ava": {
+    "en": "AVA",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787029479.svg",
+    "type": "crypto",
+    "apiSymbol": "AVA"
+  },
+  "api3": {
+    "en": "API3",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1676790325.png",
+    "type": "crypto",
+    "apiSymbol": "API3"
+  },
+  "c98": {
+    "en": "Coin98",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/c98.svg",
+    "type": "crypto",
+    "apiSymbol": "C98"
+  },
+  "mbox": {
+    "en": "Mobox",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/mbox.svg",
+    "type": "crypto",
+    "apiSymbol": "MBOX"
+  },
+  "mask": {
+    "en": "Mask Network",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/mask.svg",
+    "type": "crypto",
+    "apiSymbol": "MASK"
+  },
+  "tlm": {
+    "en": "Alien Worlds",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1627379375.png",
+    "type": "crypto",
+    "apiSymbol": "TLM"
+  },
+  "xvs": {
+    "en": "Venus",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1631450924.svg",
+    "type": "crypto",
+    "apiSymbol": "XVS"
+  },
+  "ren": {
+    "en": "Ren",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/ren.svg",
+    "type": "crypto",
+    "apiSymbol": "REN"
+  },
+  "nkn": {
+    "en": "NKN",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/nkn.svg",
+    "type": "crypto",
+    "apiSymbol": "NKN"
+  },
+  "vic": {
+    "en": "Viction",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1700117865.svg",
+    "type": "crypto",
+    "apiSymbol": "VIC"
+  },
+  "mir": {
+    "en": "Mirror Protocol",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/mir.svg",
+    "type": "crypto",
+    "apiSymbol": "MIR"
+  },
+  "band": {
+    "en": "Band Protocol",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/band.svg",
+    "type": "crypto",
+    "apiSymbol": "BAND"
+  },
+  "vra": {
+    "en": "Verasity",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "VRA"
+  },
+  "lina": {
+    "en": "Linear",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "LINA"
+  },
+  "idex": {
+    "en": "IDEX",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/idex.svg",
+    "type": "crypto",
+    "apiSymbol": "IDEX"
+  },
+  "rly": {
+    "en": "Rally",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/rly.svg",
+    "type": "crypto",
+    "apiSymbol": "RLY"
+  },
+  "slp": {
+    "en": "Smooth Love Potion",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/slp.svg",
+    "type": "crypto",
+    "apiSymbol": "SLP"
+  },
+  "ctk": {
+    "en": "CertiK",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1684854559.png",
+    "type": "crypto",
+    "apiSymbol": "CTK"
+  },
+  "forth": {
+    "en": "Ampleforth Governance",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "FORTH"
+  },
+  "skhyb": {
+    "en": "SKHYB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1784631029.png",
+    "type": "crypto",
+    "apiSymbol": "SKHYB"
+  },
+  "dodo": {
+    "en": "DODO",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/dodo.svg",
+    "type": "crypto",
+    "apiSymbol": "DODO"
+  },
+  "bel": {
+    "en": "Bella Protocol",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/bel.svg",
+    "type": "crypto",
+    "apiSymbol": "BEL"
+  },
+  "porto": {
+    "en": "FC Porto",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1640881350.png",
+    "type": "crypto",
+    "apiSymbol": "PORTO"
+  },
+  "psg": {
+    "en": "Paris Saint-Germain",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1641130380.svg",
+    "type": "crypto",
+    "apiSymbol": "PSG"
+  },
+  "ooki": {
+    "en": "Ooki Protocol",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "OOKI"
+  },
+  "lazio": {
+    "en": "Lazio Fan Token",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1641474742.png",
+    "type": "crypto",
+    "apiSymbol": "LAZIO"
+  },
+  "msfton": {
+    "en": "MSFTON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778575535.svg",
+    "type": "crypto",
+    "apiSymbol": "MSFTON"
+  },
+  "arv": {
+    "en": "ARV",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "ARV"
+  },
+  "dolo": {
+    "en": "DOLO",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787029384.svg",
+    "type": "crypto",
+    "apiSymbol": "DOLO"
+  },
+  "atm": {
+    "en": "Atletico Madrid Fan Token",
+    "icon": "https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/atm.svg",
+    "type": "crypto",
+    "apiSymbol": "ATM"
+  },
+  "juv": {
+    "en": "Juventus Fan Token",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1641752571.png",
+    "type": "crypto",
+    "apiSymbol": "JUV"
+  },
+  "asr": {
+    "en": "AS Roma Fan Token",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1641753075.png",
+    "type": "crypto",
+    "apiSymbol": "ASR"
+  },
+  "kishu": {
+    "en": "Kishu Inu",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "KISHU"
+  },
+  "rare": {
+    "en": "SuperRare",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787029060.svg",
+    "type": "crypto",
+    "apiSymbol": "RARE"
+  },
+  "sfm": {
+    "en": "SafeMoon",
+    "icon": "https://raw.githubusercontent.com/Cryptofonts/cryptoicons/refs/heads/master/SVG/sfm.svg",
+    "type": "crypto",
+    "apiSymbol": "SFM"
+  },
+  "nbisb": {
+    "en": "NBISB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786264766.svg",
+    "type": "crypto",
+    "apiSymbol": "NBISB"
+  },
+  "kernel": {
+    "en": "Kernel",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785945215.svg",
+    "type": "crypto",
+    "apiSymbol": "KERNEL"
+  },
+  "amdon": {
+    "en": "AMDON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778575766.svg",
+    "type": "crypto",
+    "apiSymbol": "AMDON"
+  },
+  "gun": {
+    "en": "GUNZ",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785945405.svg",
+    "type": "crypto",
+    "apiSymbol": "GUN"
+  },
+  "sndkb": {
+    "en": "SNDKB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1783417871.svg",
+    "type": "crypto",
+    "apiSymbol": "SNDKB"
+  },
+  "tsmon": {
+    "en": "TSMON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787564128.svg",
+    "type": "crypto",
+    "apiSymbol": "TSMON"
+  },
+  "saga": {
+    "en": "Saga",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787043075.svg",
+    "type": "crypto",
+    "apiSymbol": "SAGA"
+  },
+  "nom": {
+    "en": "Nom",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1783148695.svg",
+    "type": "crypto",
+    "apiSymbol": "NOM"
+  },
+  "scr": {
+    "en": "Scroll",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1782743022.svg",
+    "type": "crypto",
+    "apiSymbol": "SCR"
+  },
+  "liteb": {
+    "en": "LITEB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786264652.svg",
+    "type": "crypto",
+    "apiSymbol": "LITEB"
+  },
+  "orclb": {
+    "en": "ORCLB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785945035.svg",
+    "type": "crypto",
+    "apiSymbol": "ORCLB"
+  },
+  "babaon": {
+    "en": "BABAON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785568133.svg",
+    "type": "crypto",
+    "apiSymbol": "BABAON"
+  },
+  "koon": {
+    "en": "KOON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1784732967.svg",
+    "type": "crypto",
+    "apiSymbol": "KOON"
+  },
+  "llyon": {
+    "en": "LLYON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778576002.svg",
+    "type": "crypto",
+    "apiSymbol": "LLYON"
+  },
+  "pfeon": {
+    "en": "PFEON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1788348194.svg",
+    "type": "crypto",
+    "apiSymbol": "PFEON"
+  },
+  "armon": {
+    "en": "ARMON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787733091.svg",
+    "type": "crypto",
+    "apiSymbol": "ARMON"
+  },
+  "asmlon": {
+    "en": "ASMLON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787733142.svg",
+    "type": "crypto",
+    "apiSymbol": "ASMLON"
+  },
+  "pgon": {
+    "en": "PGON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785568856.svg",
+    "type": "crypto",
+    "apiSymbol": "PGON"
+  },
+  "axtib": {
+    "en": "AXTIB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785945542.svg",
+    "type": "crypto",
+    "apiSymbol": "AXTIB"
+  },
+  "ibmon": {
+    "en": "IBMON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787732755.svg",
+    "type": "crypto",
+    "apiSymbol": "IBMON"
+  },
+  "avgoon": {
+    "en": "AVGOON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778575938.svg",
+    "type": "crypto",
+    "apiSymbol": "AVGOON"
+  },
+  "cvxon": {
+    "en": "CVXON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1784972593.svg",
+    "type": "crypto",
+    "apiSymbol": "CVXON"
+  },
+  "glwb": {
+    "en": "GLWB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786265359.svg",
+    "type": "crypto",
+    "apiSymbol": "GLWB"
+  },
+  "qcomb": {
+    "en": "QCOMB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786265175.svg",
+    "type": "crypto",
+    "apiSymbol": "QCOMB"
+  },
+  "pltron": {
+    "en": "PLTRON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1784972509.svg",
+    "type": "crypto",
+    "apiSymbol": "PLTRON"
+  },
+  "wdcb": {
+    "en": "WDCB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786264833.svg",
+    "type": "crypto",
+    "apiSymbol": "WDCB"
+  },
+  "pbron": {
+    "en": "PBRON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787564432.svg",
+    "type": "crypto",
+    "apiSymbol": "PBRON"
+  },
+  "cscoon": {
+    "en": "CSCOON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1778575752.svg",
+    "type": "crypto",
+    "apiSymbol": "CSCOON"
+  },
+  "sbuxon": {
+    "en": "SBUXON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1784972672.svg",
+    "type": "crypto",
+    "apiSymbol": "SBUXON"
+  },
+  "von": {
+    "en": "VON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787732902.svg",
+    "type": "crypto",
+    "apiSymbol": "VON"
+  },
+  "abton": {
+    "en": "ABTON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785567590.svg",
+    "type": "crypto",
+    "apiSymbol": "ABTON"
+  },
+  "maon": {
+    "en": "MAON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785568235.svg",
+    "type": "crypto",
+    "apiSymbol": "MAON"
+  },
+  "baon": {
+    "en": "BAON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787564182.svg",
+    "type": "crypto",
+    "apiSymbol": "BAON"
+  },
+  "coston": {
+    "en": "COSTON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787732974.svg",
+    "type": "crypto",
+    "apiSymbol": "COSTON"
+  },
+  "biduon": {
+    "en": "BIDUON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787564241.svg",
+    "type": "crypto",
+    "apiSymbol": "BIDUON"
+  },
+  "acnon": {
+    "en": "ACNON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786797623.svg",
+    "type": "crypto",
+    "apiSymbol": "ACNON"
+  },
+  "crwvb": {
+    "en": "CRWVB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785945308.svg",
+    "type": "crypto",
+    "apiSymbol": "CRWVB"
+  },
+  "vrton": {
+    "en": "VRTON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1788348138.svg",
+    "type": "crypto",
+    "apiSymbol": "VRTON"
+  },
+  "cbarsb": {
+    "en": "CBRSB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1786265271.svg",
+    "type": "crypto",
+    "apiSymbol": "CBRSB"
+  },
+  "smhb": {
+    "en": "SMHB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785945117.svg",
+    "type": "crypto",
+    "apiSymbol": "SMHB"
+  },
+  "adbeon": {
+    "en": "ADBEON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787564062.svg",
+    "type": "crypto",
+    "apiSymbol": "ADBEON"
+  },
+  "uberon": {
+    "en": "UBERON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1788348086.svg",
+    "type": "crypto",
+    "apiSymbol": "UBERON"
+  },
+  "nflxon": {
+    "en": "NFLXON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1784972405.svg",
+    "type": "crypto",
+    "apiSymbol": "NFLXON"
+  },
+  "qntb": {
+    "en": "QNTB",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785934822.svg",
+    "type": "crypto",
+    "apiSymbol": "QNTB"
+  },
+  "unhx": {
+    "en": "UNHX",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785569145.svg",
+    "type": "crypto",
+    "apiSymbol": "UNHX"
+  },
+  "gmeon": {
+    "en": "GMEON",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787564376.svg",
+    "type": "crypto",
+    "apiSymbol": "GMEON"
+  },
+  "hdx": {
+    "en": "HDX",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1785567867.svg",
+    "type": "crypto",
+    "apiSymbol": "HDX"
+  },
+  "hpp": {
+    "en": "HPP",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1697370601.svg",
+    "type": "crypto",
+    "apiSymbol": "HPP"
+  },
+  "opn": {
+    "en": "OPN",
+    "icon": "https://cdn.bitpinex.com/media/market/currency/1787030312.svg",
+    "type": "crypto",
+    "apiSymbol": "OPN"
+  }
+}

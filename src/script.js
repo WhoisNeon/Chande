@@ -467,7 +467,8 @@ async function updateCurrencyData() {
     if (!data) return;
 
     const dateElement = document.getElementById('datetime');
-    dateElement.textContent = `${data.date}`;
+    const timeMatch = `${data.date}`.match(/\d{1,2}:\d{2}/);
+    dateElement.textContent = timeMatch ? timeMatch[0] : `${data.date}`;
 
     if (!data.currencies) {
         const message = document.createElement('p');

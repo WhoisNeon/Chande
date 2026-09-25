@@ -1,4 +1,4 @@
-const fiatGoldApiUrl = 'https://api.x4d1udxvyt.workers.dev/bonbast';
+const fiatGoldApiUrl = 'https://chand.pages.dev/api';
 const cryptoApiUrl = 'https://api.bitpin.org/api/v1/mkt/tickers/';
 
 const DEFAULT_CURRENCIES = ["usd", "eur", "18ayar", "usdt", "btc"];
